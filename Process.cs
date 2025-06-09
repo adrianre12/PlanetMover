@@ -8,10 +8,13 @@ namespace WorldMover
         private Vector3D newPlanetPosition;
 
 
-        internal void Start()
+        internal void Start(string inputSBS)
         {
+            var outputSBS = $"Moved-{inputSBS}";
+            Console.WriteLine($"Starting input={inputSBS} output={outputSBS}");
             CalculateTransformation();
             CalculateNewPlanetPosition();
+
         }
 
         internal void CalculateTransformation()
@@ -33,5 +36,7 @@ namespace WorldMover
             Console.WriteLine($"New PlanetPosition={newPlanetPosition}");
 
         }
+
+
     }
 }

@@ -14,7 +14,7 @@
 
             Configuration.Load();
             Process process = new Process();
-            process.Start();
+            process.Start(args[0]);
         }
 
 

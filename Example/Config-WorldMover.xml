@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <From>
     <PlanetEntityId>99</PlanetEntityId>
     <PlanetCenter>
@@ -26,4 +26,4 @@
     <Y>0</Y>
     <Z>0</Z>
   </TestV3D>
-</Config>
+</Configuration>

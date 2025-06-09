@@ -3,9 +3,11 @@
 
 namespace WorldMover
 {
-    public class Config
+    public class Configuration
     {
         const string configFilename = "Config-WorldMover.xml";
+
+        internal static Configuration Config;
 
         public struct FromInfo
         {
@@ -40,16 +42,16 @@ namespace WorldMover
         public ToInfo To { get; set; }
 
 
-        public Config()
+        public Configuration()
         {
             ConfigLoaded = false;
         }
 
-        public static Config Load()
+        public static void Load()
         {
 
-            Config config = null;
-            XmlSerializer serializer = new XmlSerializer(typeof(Config));
+            Config = null;
+            XmlSerializer serializer = new XmlSerializer(typeof(Configuration));
 
             if (File.Exists(configFilename))
             {
@@ -57,8 +59,8 @@ namespace WorldMover
                 {
                     using (Stream reader = new FileStream(configFilename, FileMode.Open))
                     {
-                        config = (Config)serializer.Deserialize(reader);
-                        config.ConfigLoaded = true;
+                        Config = (Configuration)serializer.Deserialize(reader);
+                        Config.ConfigLoaded = true;
                         Console.WriteLine("Config loaded");
                     }
                 }
@@ -66,22 +68,21 @@ namespace WorldMover
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error reading config: {ex}");
-                    return new Config();
+                    Config = new Configuration();
                 }
-                return config;
+                return;
             }
 
-            config = new Config();
-            config.From = new FromInfo(new Vector3D(), new Vector3D());
-            config.To = new ToInfo(new Vector3D());
-            config.ConfigLoaded = false;
+            Config = new Configuration();
+            Config.From = new FromInfo(new Vector3D(), new Vector3D());
+            Config.To = new ToInfo(new Vector3D());
+            Config.ConfigLoaded = false;
 
             using (Stream writer = new FileStream(configFilename, FileMode.Create))
             {
-                serializer.Serialize(writer, config);
+                serializer.Serialize(writer, Config);
                 Console.WriteLine("New Config file created");
             }
-            return config;
         }
     }
 

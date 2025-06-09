@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WorldMover": {
+      "commandName": "Project",
+      "commandLineArgs": "SANDBOX_0_0_0_.sbs "
+    }
+  }
+}

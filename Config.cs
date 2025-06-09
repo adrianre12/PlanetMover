@@ -38,7 +38,8 @@ namespace WorldMover
 
         public FromInfo From { get; set; }
         public ToInfo To { get; set; }
-        public Vector3D TestV3D { get; set; }
+
+
         public Config()
         {
             ConfigLoaded = false;
@@ -73,7 +74,6 @@ namespace WorldMover
             config = new Config();
             config.From = new FromInfo(new Vector3D(), new Vector3D());
             config.To = new ToInfo(new Vector3D());
-            config.TestV3D = new Vector3D();
             config.ConfigLoaded = false;
 
             using (Stream writer = new FileStream(configFilename, FileMode.Create))

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <From>
+    <PlanetEntityId>99</PlanetEntityId>
+    <PlanetCenter>
+      <X>1</X>
+      <Y>2</Y>
+      <Z>3</Z>
+    </PlanetCenter>
+    <PlanetPosition>
+      <X>4</X>
+      <Y>5</Y>
+      <Z>6</Z>
+    </PlanetPosition>
+    <IncludeEntitiesRadius>0</IncludeEntitiesRadius>
+  </From>
+  <To>
+    <PlanetCenter>
+      <X>7</X>
+      <Y>8</Y>
+      <Z>9</Z>
+    </PlanetCenter>
+  </To>
+  <TestV3D>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0</Z>
+  </TestV3D>
+</Config>

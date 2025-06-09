@@ -2,7 +2,8 @@
   "profiles": {
     "WorldMover": {
       "commandName": "Project",
-      "commandLineArgs": "SANDBOX_0_0_0_.sbs "
+      "commandLineArgs": "SANDBOX_0_0_0_.sbs ",
+      "workingDirectory": "C:\\Users\\Adrian\\source\\repos\\WorldMover\\Example"
     }
   }
 }

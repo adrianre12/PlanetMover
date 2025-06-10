@@ -8,7 +8,7 @@
         //public Position position;
         public void One()
         {
-            string line = "\t<Position X=\"10759.237533857849\" Y=\"11085.651060095279\" Z=\"10985.962048027191\" />";
+            string line = "\t<Position x=\"10759.237533857849\" y=\"11085.651060095279\" z=\"10985.962048027191\" />";
             Console.WriteLine($"Index={line.IndexOf("<Position")} prefix=[{line.Substring(0, line.IndexOf("<Position"))}]");
 
             Position position = line.Trim().Deserialize<Position>();

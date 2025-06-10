@@ -6,11 +6,11 @@ namespace WorldMover
 {
     public class Position
     {
-        [XmlAttribute]
+        [XmlAttribute("x")]
         public double X { get; set; }
-        [XmlAttribute]
+        [XmlAttribute("y")]
         public double Y { get; set; }
-        [XmlAttribute]
+        [XmlAttribute("z")]
         public double Z { get; set; }
 
         public Position() { }
@@ -36,6 +36,7 @@ namespace WorldMover
         internal void Start(Mode mode, string inputFile, string outputFile)
         {
             Console.WriteLine($"Starting input={inputFile} output={outputFile}");
+            Console.WriteLine($"PlanetCenter={Config.From.PlanetCenter}");
             CalculateTransformation();
             CalculateNewPlanetPosition();
             using (var outFileStream = new FileStream(outputFile, FileMode.Create))
@@ -138,9 +139,11 @@ namespace WorldMover
 
                     case bool b when isPositionAndOrientation && line.Contains("<Position "):
                         {
+                            Position pos = line.Trim().Deserialize<Position>();
+                            Vector3D position = pos.Vector3D();
+                            var distance = Vector3D.Distance(position, Config.From.PlanetCenter);
                             Console.WriteLine(line);
-                            Position position = line.Deserialize<Position>();
-
+                            Console.WriteLine($"distance={distance});");
                             switch (mode)
                             {
                                 case Mode.Move:
@@ -148,29 +151,39 @@ namespace WorldMover
                                         if (isThePlanet)
                                         {
                                             // move the planet
-                                            Position newPosition = new Position(position.Vector3D() + transformation);
+                                            Position newPosition = new Position(position + transformation);
                                             string newLine = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
-                                            Console.WriteLine(line);
 
                                             Console.WriteLine(newLine);
                                         }
                                         else
                                         {
                                             // check distance and move then
+                                            if (distance > Config.From.IncludeEntitiesRadius)
+                                                break;
+
+                                            Position newPosition = new Position(position + transformation);
+                                            string newLine = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
+
+                                            Console.WriteLine(newLine);
                                         }
                                         break;
                                     }
                                 case Mode.Extract:
                                     {
                                         // is planet or grid in distance then
+                                        if (distance > Config.From.IncludeEntitiesRadius)
+                                            break;
                                         outputSectorObject = true;
                                         break;
                                     }
                                 case Mode.Remove:
                                     {
-                                        //is planet or in distance then 
+                                        //is planet or grid in distance then 
+                                        if (distance > Config.From.IncludeEntitiesRadius)
+                                            break;
                                         outputSectorObject = false;
                                         //else true;
                                         break;

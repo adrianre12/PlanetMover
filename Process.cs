@@ -29,23 +29,26 @@ namespace WorldMover
     internal class Process
     {
         private Vector3D transformation;
-        private Vector3D newPlanetPosition;
+        //private Vector3D newPlanetPosition;
         private StreamWriter outStreamWriter;
         private StreamReader inStreamReader;
 
         internal void Start(Mode mode, string inputFile, string outputFile)
         {
-            Console.WriteLine($"Starting input={inputFile} output={outputFile}");
-            Console.WriteLine($"PlanetCenter={Config.From.PlanetCenter}");
-            CalculateTransformation();
-            CalculateNewPlanetPosition();
+            Console.WriteLine($"Starting Mode={mode.ToString()} Input={inputFile} Output={outputFile}");
+            Console.WriteLine($"From PlanetCenter={Config.From.PlanetCenter}");
+            if (mode == Mode.Move)
+            {
+                Console.WriteLine($"To   PlanetCenter={Config.To.PlanetCenter}");
+                CalculateTransformation();
+            }
+            //CalculateNewPlanetPosition();
             using (var outFileStream = new FileStream(outputFile, FileMode.Create))
             using (outStreamWriter = new StreamWriter(outFileStream))
             using (var inFileStream = new FileStream(inputFile, FileMode.Open))
             using (inStreamReader = new StreamReader(inFileStream))
 
                 ParseSBS(mode);
-
         }
 
         internal void CalculateTransformation()
@@ -57,19 +60,20 @@ namespace WorldMover
             Console.WriteLine($"Transformation: {transformation}");
         }
 
-        internal void CalculateNewPlanetPosition()
-        {
-            Console.WriteLine("CalculateNewPlanetPosition.");
+        /*        internal void CalculateNewPlanetPosition()
+                {
+                    Console.WriteLine("CalculateNewPlanetPosition.");
 
-            var centerToPositionTransformation = Config.From.PlanetPosition - Config.From.PlanetCenter;
-            newPlanetPosition = Config.To.PlanetCenter + centerToPositionTransformation;
+                    var centerToPositionTransformation = Config.From.PlanetPosition - Config.From.PlanetCenter;
+                    newPlanetPosition = Config.To.PlanetCenter + centerToPositionTransformation;
 
-            Console.WriteLine($"New PlanetPosition={newPlanetPosition}");
+                    Console.WriteLine($"New PlanetPosition={newPlanetPosition}");
 
-        }
+                }*/
 
         private void ParseSBS(Mode mode)
         {
+            Console.WriteLine($"\nStarting {mode.ToString()}\n");
             bool nonSectorObjects = false;
             bool outputSectorObject = false;
             bool isEntityBase = false;
@@ -107,7 +111,7 @@ namespace WorldMover
                 {
                     case bool b when line.Contains("<MyObjectBuilder_EntityBase"):
                         {
-                            Console.WriteLine($"EntityBase Start: {line}");
+                            Console.WriteLine($"EntityBase Start:\n\t{line.Trim()}");
                             isEntityBase = true;
 
                             if (line.Contains("MyObjectBuilder_Planet"))
@@ -118,18 +122,29 @@ namespace WorldMover
 
                     case bool b when line.Contains("</MyObjectBuilder_EntityBase>"):
                         {
-                            Console.WriteLine("EntityBase End:");
+                            Console.WriteLine($"\tSelected: {outputSectorObject}");
+                            Console.WriteLine("EntityBase End:\n");
                             flush = true;
                             break;
                         }
 
-                    case bool b when isPlanet && line.Contains("<EntityId>"):
+                    case bool b when isPlanet && line.Contains("<EntityId>") && line.Contains(Config.From.PlanetEntityId):
                         {
-                            Console.WriteLine("TODO: Check it is the right planet.");
+                            Console.WriteLine("\tFound the planet.");
 
                             isThePlanet = true;
                             break;
                         }
+
+                    case bool b when isThePlanet && line.Contains("<Name>"):
+                        {
+                            var start = line.IndexOf(">") + 1;
+                            var end = line.IndexOf("<", start);
+                            string name = line.Substring(start, end - start);
+                            Console.WriteLine($"\tPlanet Name: {name}");
+                            break;
+                        }
+
 
                     case bool b when isEntityBase && line.Contains("<PositionAndOrientation>"):
                         {
@@ -141,21 +156,28 @@ namespace WorldMover
                         {
                             Position pos = line.Trim().Deserialize<Position>();
                             Vector3D position = pos.Vector3D();
-                            var distance = Vector3D.Distance(position, Config.From.PlanetCenter);
-                            Console.WriteLine(line);
-                            Console.WriteLine($"distance={distance});");
+                            double distance;
+                            if (isPlanet)
+                            {
+                                distance = Vector3D.Distance(position, Config.From.PlanetPosition);
+                            }
+                            else
+                            {
+                                distance = Vector3D.Distance(position, Config.From.PlanetCenter);
+                            }
+                            Console.WriteLine($"\tDistance={distance}");
                             switch (mode)
                             {
                                 case Mode.Move:
                                     {
+                                        Console.WriteLine($"\tOriginal Position: X={position.X} Y={position.Y} Z={position.Z}");
+
                                         if (isThePlanet)
                                         {
                                             // move the planet
                                             Position newPosition = new Position(position + transformation);
-                                            string newLine = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
+                                            line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
-
-                                            Console.WriteLine(newLine);
                                         }
                                         else
                                         {
@@ -164,25 +186,30 @@ namespace WorldMover
                                                 break;
 
                                             Position newPosition = new Position(position + transformation);
-                                            string newLine = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
+                                            line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
-
-                                            Console.WriteLine(newLine);
                                         }
+                                        Console.WriteLine($"\tUpdated  Position: X={position.X} Y={position.Y} Z={position.Z}");
+
                                         break;
                                     }
                                 case Mode.Extract:
                                     {
+                                        Console.WriteLine($"\tPosition: X={position.X} Y={position.Y} Z={position.Z}");
+
                                         // is planet or grid in distance then
-                                        if (distance > Config.From.IncludeEntitiesRadius)
+                                        if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
                                             break;
                                         outputSectorObject = true;
                                         break;
                                     }
                                 case Mode.Remove:
                                     {
+                                        Console.WriteLine($"\tPosition: X={position.X} Y={position.Y} Z={position.Z}");
+
                                         //is planet or grid in distance then 
-                                        if (distance > Config.From.IncludeEntitiesRadius)
+                                        outputSectorObject = true;
+                                        if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
                                             break;
                                         outputSectorObject = false;
                                         //else true;
@@ -195,8 +222,18 @@ namespace WorldMover
                                         break;
                                     }
                             }
+                            break;
                         }
-                        break;
+
+                    case bool b when !isPlanet && line.Contains("<DisplayName>"):
+                        {
+                            var start = line.IndexOf(">") + 1;
+                            var end = line.IndexOf("<", start);
+                            string name = line.Substring(start, end - start);
+                            Console.WriteLine($"\tName: {name}");
+                            break;
+                        }
+
                 } // end of switch
 
                 //decide flush or discard

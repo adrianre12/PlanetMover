@@ -136,7 +136,7 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when isThePlanet && line.Contains("<Name>"):
+                    case bool b when isPlanet && line.Contains("<Name>"):
                         {
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
@@ -170,6 +170,7 @@ namespace WorldMover
                             {
                                 case Mode.Move:
                                     {
+                                        outputSectorObject = true;
                                         Console.WriteLine($"\tOriginal Position: X={position.X} Y={position.Y} Z={position.Z}");
                                         Position newPosition;
                                         if (isThePlanet)
@@ -177,7 +178,6 @@ namespace WorldMover
                                             // move the planet
                                             newPosition = new Position(position + transformation);
                                             line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
-                                            outputSectorObject = true;
                                         }
                                         else
                                         {
@@ -187,7 +187,6 @@ namespace WorldMover
 
                                             newPosition = new Position(position + transformation);
                                             line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
-                                            outputSectorObject = true;
                                         }
                                         Console.WriteLine($"\tUpdated  Position: X={newPosition.X} Y={newPosition.Y} Z={newPosition.Z}");
 
@@ -225,12 +224,21 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when !isPlanet && line.Contains("<DisplayName>"):
+                    case bool b when line.Contains("<DisplayName>"):
                         {
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
                             string name = line.Substring(start, end - start);
                             Console.WriteLine($"\tName: {name}");
+                            break;
+                        }
+
+                    case bool b when line.Contains("<StorageName>"):
+                        {
+                            var start = line.IndexOf(">") + 1;
+                            var end = line.IndexOf("<", start);
+                            string name = line.Substring(start, end - start);
+                            Console.WriteLine($"\tStorage Name: {name}");
                             break;
                         }
 

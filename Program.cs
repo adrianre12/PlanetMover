@@ -21,7 +21,7 @@
             if (args.Length > 0 && !Enum.TryParse<Mode>(args[0], true, out mode))
             {
                 Console.WriteLine($"Unrecognised Mode: {args[0]}");
-                Usage();
+                UsageAndExit();
                 return;
             }
 
@@ -55,9 +55,15 @@
             CheckArgs(4, args);
             if (!Configuration.Load(args[1]))
             {
-                Usage();
-                return;
+                UsageAndExit();
             }
+
+            if (!File.Exists(args[2]))
+            {
+                Console.WriteLine($"Input file not found: {args[2]}");
+                UsageAndExit();
+            }
+
             Process process = new Process();
             process.Start(mode, args[2], args[3]);
 
@@ -68,12 +74,11 @@
             if (args.Length != required)
             {
                 Console.WriteLine("Wrong number of arguments.");
-                Usage();
-                System.Environment.Exit(1);
+                UsageAndExit();
             }
         }
 
-        static void Usage()
+        static void UsageAndExit()
         {
             Console.WriteLine("\nUsage:");
             Console.WriteLine("Mode: Move - Change planet and grids position");
@@ -84,6 +89,7 @@
             Console.WriteLine("      WorldMover.exe Remove ConfigFileName InputFileName OutputFileName\n");
             Console.WriteLine("Mode: Config - Create a new default config file");
             Console.WriteLine("      WorldMover.exe Create ConfigFileName");
+            System.Environment.Exit(1);
         }
 
     }

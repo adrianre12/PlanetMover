@@ -5,8 +5,6 @@ namespace WorldMover
 {
     public class Configuration
     {
-        const string configFilename = "Config-WorldMover.xml";
-
         internal static Configuration Config;
 
         public struct FromInfo
@@ -47,7 +45,7 @@ namespace WorldMover
             ConfigLoaded = false;
         }
 
-        public static void Load()
+        public static void Load(string configFilename)
         {
 
             Config = null;

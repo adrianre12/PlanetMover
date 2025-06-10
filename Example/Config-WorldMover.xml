@@ -7,6 +7,6 @@
     <IncludeEntitiesRadius>15000</IncludeEntitiesRadius>
   </From>
   <To>
-    <PlanetCenter X="16384.5" Y="16384.5" Z="16384.5" />
+    <PlanetCenter X="26384.5" Y="16384.5" Z="16384.5" />
   </To>
 </Configuration>

@@ -171,11 +171,11 @@ namespace WorldMover
                                 case Mode.Move:
                                     {
                                         Console.WriteLine($"\tOriginal Position: X={position.X} Y={position.Y} Z={position.Z}");
-
+                                        Position newPosition;
                                         if (isThePlanet)
                                         {
                                             // move the planet
-                                            Position newPosition = new Position(position + transformation);
+                                            newPosition = new Position(position + transformation);
                                             line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
                                         }
@@ -185,11 +185,11 @@ namespace WorldMover
                                             if (distance > Config.From.IncludeEntitiesRadius)
                                                 break;
 
-                                            Position newPosition = new Position(position + transformation);
+                                            newPosition = new Position(position + transformation);
                                             line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                             outputSectorObject = true;
                                         }
-                                        Console.WriteLine($"\tUpdated  Position: X={position.X} Y={position.Y} Z={position.Z}");
+                                        Console.WriteLine($"\tUpdated  Position: X={newPosition.X} Y={newPosition.Y} Z={newPosition.Z}");
 
                                         break;
                                     }

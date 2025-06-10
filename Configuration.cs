@@ -34,7 +34,7 @@ namespace WorldMover
         }
 
         [XmlIgnore]
-        public bool ConfigLoaded;
+        public bool IsLoaded;
 
         public FromInfo From { get; set; }
         public ToInfo To { get; set; }
@@ -42,13 +42,13 @@ namespace WorldMover
 
         public Configuration()
         {
-            ConfigLoaded = false;
+            IsLoaded = false;
         }
 
-        public static void Load(string configFilename)
+        public static bool Load(string configFilename)
         {
 
-            Config = null;
+            Config = new Configuration();
             XmlSerializer serializer = new XmlSerializer(typeof(Configuration));
 
             if (File.Exists(configFilename))
@@ -58,7 +58,7 @@ namespace WorldMover
                     using (Stream reader = new FileStream(configFilename, FileMode.Open))
                     {
                         Config = (Configuration)serializer.Deserialize(reader);
-                        Config.ConfigLoaded = true;
+                        Config.IsLoaded = true;
                         Console.WriteLine("Config loaded");
                     }
                 }
@@ -68,13 +68,20 @@ namespace WorldMover
                     Console.WriteLine($"Error reading config: {ex}");
                     Config = new Configuration();
                 }
-                return;
+                return Config.IsLoaded;
             }
 
+            Console.WriteLine("Config file not found");
+            return false;
+        }
+
+        public static void Create(string configFilename)
+        {
             Config = new Configuration();
             Config.From = new FromInfo(new Vector3D(), new Vector3D());
             Config.To = new ToInfo(new Vector3D());
-            Config.ConfigLoaded = false;
+            Config.IsLoaded = false;
+            XmlSerializer serializer = new XmlSerializer(typeof(Configuration));
 
             using (Stream writer = new FileStream(configFilename, FileMode.Create))
             {

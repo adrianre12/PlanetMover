@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <From>
-    <PlanetEntityId>99</PlanetEntityId>
-    <PlanetCenter>
-      <X>1</X>
-      <Y>2</Y>
-      <Z>3</Z>
-    </PlanetCenter>
-    <PlanetPosition>
-      <X>4</X>
-      <Y>5</Y>
-      <Z>6</Z>
-    </PlanetPosition>
-    <IncludeEntitiesRadius>0</IncludeEntitiesRadius>
+    <PlanetEntityId>3961408087623864766</PlanetEntityId>
+    <PlanetCenter X="16384.5" Y="16384.5" Z="16384.5" />
+    <PlanetPosition X="0.5" Y="0.5" Z="0.5" />
+    <IncludeEntitiesRadius>15000</IncludeEntitiesRadius>
   </From>
   <To>
-    <PlanetCenter>
-      <X>7</X>
-      <Y>8</Y>
-      <Z>9</Z>
-    </PlanetCenter>
+    <PlanetCenter X="10000" Y="0" Z="0" />
   </To>
 </Configuration>

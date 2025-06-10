@@ -14,6 +14,7 @@ namespace WorldMover
             Console.WriteLine($"Starting input={inputFile} output={outputSBS}");
             CalculateTransformation();
             CalculateNewPlanetPosition();
+            ParseSBS();
 
         }
 
@@ -37,6 +38,10 @@ namespace WorldMover
 
         }
 
+        private void ParseSBS()
+        {
+
+        }
 
     }
 }

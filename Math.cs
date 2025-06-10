@@ -1,9 +1,14 @@
-﻿namespace WorldMover
+﻿using System.Xml.Serialization;
+
+namespace WorldMover
 {
     public struct Vector3D
     {
+        [XmlAttribute]
         public double X { get; set; }
+        [XmlAttribute]
         public double Y { get; set; }
+        [XmlAttribute]
         public double Z { get; set; }
 
         public Vector3D()

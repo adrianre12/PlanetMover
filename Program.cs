@@ -9,6 +9,7 @@
         Extract,
         Remove,
         Config,
+        Temp,
     }
     class Program
     {
@@ -40,7 +41,13 @@
                     break;
                 case Mode.Remove:
                     break;
-
+                case Mode.Temp:
+                    {
+                        Temp temp = new Temp();
+                        temp.One();
+                        System.Environment.Exit(0);
+                        break;
+                    }
                 default:
                     {
                         Console.WriteLine("Unimplemented Mode:");
@@ -49,8 +56,7 @@
                     }
             }
 
-            //Temp temp = new Temp();
-            //temp.One();
+
 
             CheckArgs(4, args);
             if (!Configuration.Load(args[1]))

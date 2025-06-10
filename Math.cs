@@ -2,7 +2,7 @@
 
 namespace WorldMover
 {
-    public struct Vector3D
+    public class Vector3D
     {
         [XmlAttribute]
         public double X { get; set; }
@@ -27,7 +27,7 @@ namespace WorldMover
 
         public static Vector3D operator +(Vector3D value1, Vector3D value2)
         {
-            Vector3D result = default(Vector3D);
+            Vector3D result = new Vector3D();
             result.X = value1.X + value2.X;
             result.Y = value1.Y + value2.Y;
             result.Z = value1.Z + value2.Z;
@@ -36,7 +36,7 @@ namespace WorldMover
 
         public static Vector3D operator -(Vector3D value1, Vector3D value2)
         {
-            Vector3D result = default(Vector3D);
+            Vector3D result = new Vector3D();
             result.X = value1.X - value2.X;
             result.Y = value1.Y - value2.Y;
             result.Z = value1.Z - value2.Z;

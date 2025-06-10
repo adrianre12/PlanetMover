@@ -1,8 +1,31 @@
 ﻿using System.Text;
+using System.Xml.Serialization;
 using static WorldMover.Configuration;
 
 namespace WorldMover
 {
+    public class Position
+    {
+        [XmlAttribute]
+        public double X { get; set; }
+        [XmlAttribute]
+        public double Y { get; set; }
+        [XmlAttribute]
+        public double Z { get; set; }
+
+        public Position() { }
+        public Position(Vector3D vector3D)
+        {
+            X = vector3D.X;
+            Y = vector3D.Y;
+            Z = vector3D.Z;
+        }
+        public Vector3D Vector3D()
+        {
+            return new Vector3D(X, Y, Z);
+        }
+    }
+
     internal class Process
     {
         private Vector3D transformation;
@@ -47,8 +70,12 @@ namespace WorldMover
         private void ParseSBS(Mode mode)
         {
             bool nonSectorObjects = false;
-            bool collect = false;
+            bool outputSectorObject = false;
+            bool isEntityBase = false;
             bool flush = false;
+            bool isPlanet = false;
+            bool isPositionAndOrientation = false;
+            bool isThePlanet = false;
             var lineBuffer = new StringBuilder();
 
             switch (mode)
@@ -69,6 +96,7 @@ namespace WorldMover
                         break;
                     }
             }
+
             while (!inStreamReader.EndOfStream)
             {
                 var line = inStreamReader.ReadLine();
@@ -79,7 +107,11 @@ namespace WorldMover
                     case bool b when line.Contains("<MyObjectBuilder_EntityBase"):
                         {
                             Console.WriteLine($"EntityBase Start: {line}");
-                            collect = true;
+                            isEntityBase = true;
+
+                            if (line.Contains("MyObjectBuilder_Planet"))
+                                isPlanet = true;
+
                             break;
                         }
 
@@ -89,20 +121,89 @@ namespace WorldMover
                             flush = true;
                             break;
                         }
-                }
-                //start collecting
+
+                    case bool b when isPlanet && line.Contains("<EntityId>"):
+                        {
+                            Console.WriteLine("TODO: Check it is the right planet.");
+
+                            isThePlanet = true;
+                            break;
+                        }
+
+                    case bool b when isEntityBase && line.Contains("<PositionAndOrientation>"):
+                        {
+                            isPositionAndOrientation = true;
+                            break;
+                        }
+
+                    case bool b when isPositionAndOrientation && line.Contains("<Position "):
+                        {
+                            Console.WriteLine(line);
+                            Position position = line.Deserialize<Position>();
+
+                            switch (mode)
+                            {
+                                case Mode.Move:
+                                    {
+                                        if (isThePlanet)
+                                        {
+                                            // move the planet
+                                            Position newPosition = new Position(position.Vector3D() + transformation);
+                                            string newLine = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
+                                            outputSectorObject = true;
+                                            Console.WriteLine(line);
+
+                                            Console.WriteLine(newLine);
+                                        }
+                                        else
+                                        {
+                                            // check distance and move then
+                                            outputSectorObject = true;
+                                        }
+                                        break;
+                                    }
+                                case Mode.Extract:
+                                    {
+                                        // is planet or grid in distance then
+                                        outputSectorObject = true;
+                                        break;
+                                    }
+                                case Mode.Remove:
+                                    {
+                                        //is planet or in distance then 
+                                        outputSectorObject = false;
+                                        //else true;
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        Console.WriteLine("Error: Unimpemented mode");
+                                        outputSectorObject = false;
+                                        break;
+                                    }
+                            }
+                        }
+                        break;
+                } // end of switch
+
                 //decide flush or discard
 
                 if (flush)
                 {
-                    lineBuffer.AppendLine(line);
-                    outStreamWriter.Write(lineBuffer.ToString());
+                    if (outputSectorObject)
+                    {
+                        lineBuffer.AppendLine(line);
+                        outStreamWriter.Write(lineBuffer.ToString());
+                    }
                     lineBuffer.Clear();
                     flush = false;
-                    collect = false;
+                    isEntityBase = false;
+                    isPlanet = false;
+                    isPositionAndOrientation = false;
+                    outputSectorObject = false;
                     continue;
                 }
-                if (collect)
+                if (isEntityBase)
                 {
                     lineBuffer.AppendLine(line);
                     continue;

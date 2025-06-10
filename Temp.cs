@@ -1,21 +1,5 @@
-﻿using System.Xml.Serialization;
-
-namespace WorldMover
+﻿namespace WorldMover
 {
-    public class Position
-    {
-        [XmlAttribute]
-        public double X { get; set; }
-        [XmlAttribute]
-        public double Y { get; set; }
-        [XmlAttribute]
-        public double Z { get; set; }
-
-        public Position()
-        {
-
-        }
-    }
 
     internal class Temp
     {
@@ -24,13 +8,23 @@ namespace WorldMover
         //public Position position;
         public void One()
         {
-            string line = "﻿<Position X=\"10759.237533857849\" Y=\"11085.651060095279\" Z=\"10985.962048027191\" />";
+            string line = "\t<Position X=\"10759.237533857849\" Y=\"11085.651060095279\" Z=\"10985.962048027191\" />";
+            Console.WriteLine($"Index={line.IndexOf("<Position")} prefix=[{line.Substring(0, line.IndexOf("<Position"))}]");
 
-            Position position = line.Deserialize<Position>();
+            Position position = line.Trim().Deserialize<Position>();
             Console.WriteLine($"Position: X={position.X} Y={position.Y} Z={position.Z}");
 
             line = position.Serialize();
             Console.WriteLine($"String: {line}");
+            var v1 = new Vector3D(1, 2, 3);
+
+            Vector3D v2 = position.Vector3D() + v1;
+
+            Position p = new Position(v2);
+            line = p.Serialize();
+            Console.WriteLine($"String: {p}");
+            Console.WriteLine($"Position: X={position.X} Y={position.Y} Z={position.Z}");
+
         }
     }
 }

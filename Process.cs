@@ -74,6 +74,7 @@ namespace WorldMover
         private void ParseSBS(Mode mode)
         {
             Console.WriteLine($"\nStarting {mode.ToString()}\n");
+            string indent = "\t";
             bool nonSectorObjects = false;
             bool outputSectorObject = false;
             bool isEntityBase = false;
@@ -81,6 +82,8 @@ namespace WorldMover
             bool isPlanet = false;
             bool isPositionAndOrientation = false;
             bool isThePlanet = false;
+            bool inChildren = false;
+            bool disablePosition = false;
             var lineBuffer = new StringBuilder();
 
             switch (mode)
@@ -109,9 +112,9 @@ namespace WorldMover
                 //look for <MyObjectBuilder_EntityBase
                 switch (true)
                 {
-                    case bool b when line.Contains("<MyObjectBuilder_EntityBase"):
+                    case bool b when !inChildren && !isEntityBase && line.Contains("<MyObjectBuilder_EntityBase"):
                         {
-                            Console.WriteLine($"EntityBase Start:\n\t{line.Trim()}");
+                            Console.WriteLine($"EntityBase Start:\n{indent}{line.Trim()}");
                             isEntityBase = true;
 
                             if (line.Contains("MyObjectBuilder_Planet"))
@@ -120,9 +123,9 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when line.Contains("</MyObjectBuilder_EntityBase>"):
+                    case bool b when !inChildren && line.Contains("</MyObjectBuilder_EntityBase>"):
                         {
-                            Console.WriteLine($"\tSelected: {outputSectorObject}");
+                            Console.WriteLine($"{indent}Selected: {outputSectorObject}");
                             Console.WriteLine("EntityBase End:\n");
                             flush = true;
                             break;
@@ -130,7 +133,7 @@ namespace WorldMover
 
                     case bool b when isPlanet && line.Contains("<EntityId>") && line.Contains(Config.From.PlanetEntityId):
                         {
-                            Console.WriteLine("\tFound the planet.");
+                            Console.WriteLine($"{indent}Found the planet.");
 
                             isThePlanet = true;
                             break;
@@ -141,7 +144,7 @@ namespace WorldMover
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
                             string name = line.Substring(start, end - start);
-                            Console.WriteLine($"\tPlanet Name: {name}");
+                            Console.WriteLine($"{indent}Planet Name: {name}");
                             break;
                         }
 
@@ -152,7 +155,7 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when isPositionAndOrientation && line.Contains("<Position "):
+                    case bool b when !disablePosition && isPositionAndOrientation && line.Contains("<Position "):
                         {
                             Position pos = line.Trim().Deserialize<Position>();
                             Vector3D position = pos.Vector3D();
@@ -165,13 +168,13 @@ namespace WorldMover
                             {
                                 distance = Vector3D.Distance(position, Config.From.PlanetCenter);
                             }
-                            Console.WriteLine($"\tDistance={distance}");
+                            Console.WriteLine($"{indent}Distance={distance}");
                             switch (mode)
                             {
                                 case Mode.Move:
                                     {
                                         outputSectorObject = true;
-                                        Console.WriteLine($"\tOriginal Position: X={position.X} Y={position.Y} Z={position.Z}");
+                                        Console.WriteLine($"{indent}Original Position: X={position.X} Y={position.Y} Z={position.Z}");
                                         Position newPosition;
                                         if (isThePlanet)
                                         {
@@ -188,13 +191,13 @@ namespace WorldMover
                                             newPosition = new Position(position + transformation);
                                             line = string.Concat(line.Substring(0, line.IndexOf("<Position ")), newPosition.Serialize());
                                         }
-                                        Console.WriteLine($"\tUpdated  Position: X={newPosition.X} Y={newPosition.Y} Z={newPosition.Z}");
+                                        Console.WriteLine($"{indent}Updated  Position: X={newPosition.X} Y={newPosition.Y} Z={newPosition.Z}");
 
                                         break;
                                     }
                                 case Mode.Extract:
                                     {
-                                        Console.WriteLine($"\tPosition: X={position.X} Y={position.Y} Z={position.Z}");
+                                        Console.WriteLine($"{indent}Position: X={position.X} Y={position.Y} Z={position.Z}");
 
                                         // is planet or grid in distance then
                                         if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
@@ -204,7 +207,7 @@ namespace WorldMover
                                     }
                                 case Mode.Remove:
                                     {
-                                        Console.WriteLine($"\tPosition: X={position.X} Y={position.Y} Z={position.Z}");
+                                        Console.WriteLine($"{indent}Position: X={position.X} Y={position.Y} Z={position.Z}");
 
                                         //is planet or grid in distance then 
                                         outputSectorObject = true;
@@ -229,7 +232,7 @@ namespace WorldMover
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
                             string name = line.Substring(start, end - start);
-                            Console.WriteLine($"\tName: {name}");
+                            Console.WriteLine($"{indent}Name: {name}");
                             break;
                         }
 
@@ -238,7 +241,65 @@ namespace WorldMover
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
                             string name = line.Substring(start, end - start);
-                            Console.WriteLine($"\tStorage Name: {name}");
+                            Console.WriteLine($"{indent}Storage Name: {name}");
+                            break;
+                        }
+
+                    case bool b when line.Contains("<Children>"): // work arround for characters possibly grids
+                        {
+                            Console.WriteLine($"{indent}Start Children");
+                            indent = "\t\t";
+                            inChildren = true; // supress looking at MyObjectBuilder_EntityBase
+                            break;
+                        }
+
+                    case bool b when line.Contains("</Children>"):
+                        {
+                            indent = "\t";
+                            Console.WriteLine($"{indent}End Children");
+                            inChildren = false;
+                            break;
+                        }
+
+                    case bool b when line.Contains("<Pilot>"): // work arround for characters possibly grids
+                        {
+                            Console.WriteLine($"{indent}Start Pilot");
+                            indent = "\t\t";
+                            break;
+                        }
+
+                    case bool b when line.Contains("</Pilot>"):
+                        {
+                            indent = "\t";
+                            Console.WriteLine($"{indent}End Pilot");
+                            break;
+                        }
+
+                    case bool b when line.Contains("<PilotRelativeWorld>"): // work arround for characters possibly grids
+                        {
+                            //Console.WriteLine("Start PilotRelativeWorld");
+                            disablePosition = true;
+                            break;
+                        }
+
+                    case bool b when line.Contains("</PilotRelativeWorld>"):
+                        {
+                            //Console.WriteLine("End PilotRelativeWorld");
+                            disablePosition = false;
+                            break;
+                        }
+
+                    case bool b when line.Contains("<LocalPositionAndOrientation>"): // work arround for characters possibly grids
+                        {
+                            //Console.WriteLine("Start PilotRelativeWorld");
+                            disablePosition = true;
+                            break;
+                        }
+
+                    case bool b when line.Contains("</LocalPositionAndOrientation>"):
+                        {
+                            //Console.WriteLine("End PilotRelativeWorld");
+                            disablePosition = false;
                             break;
                         }
 
@@ -260,6 +321,8 @@ namespace WorldMover
                     isThePlanet = false;
                     isPositionAndOrientation = false;
                     outputSectorObject = false;
+                    inChildren = false;
+                    disablePosition = false;
                     continue;
                 }
                 if (isEntityBase)

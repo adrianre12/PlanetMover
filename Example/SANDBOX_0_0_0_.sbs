@@ -76,6 +76,38 @@
           <Owner>144115188075855895</Owner>
           <BuiltBy>144115188075855895</BuiltBy>
           <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyModStorageComponentBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                  <Storage>
+                    <dictionary>
+                      <item>
+                        <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
+                        <Value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;From&gt;
+    &lt;PlanetEntityId&gt;3961408087623864766&lt;/PlanetEntityId&gt;
+    &lt;PlanetCenter X="16384" Y="16384" Z="16384" /&gt;
+    &lt;!--This is the Position shown in the SBS file --&gt;
+    &lt;PlanetPosition X="0" Y="0" Z="0" /&gt;
+&lt;!--This is set to planet Maximum Radius plus 1000m, set to 0 to disable any other objects. --&gt;
+&lt;IncludeEntitiesRadius&gt;10785&lt;/IncludeEntitiesRadius&gt;
+  &lt;/From&gt;
+  &lt;To&gt;
+    &lt;!-- Change this position to the GPS values of the new location --&gt;
+    &lt;PlanetCenter X="16384" Y="16384" Z="16384" /&gt;
+  &lt;/To&gt;
+&lt;/Configuration&gt;
+</Value>
+                      </item>
+                    </dictionary>
+                  </Storage>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
           <ShowOnHUD>false</ShowOnHUD>
           <ShowInTerminal>true</ShowInTerminal>
           <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -98,14 +130,14 @@
       <PersistentFlags>CastShadows InScene</PersistentFlags>
       <Name>124168712738897777</Name>
       <PositionAndOrientation>
-        <Position x="10763.469219122448" y="11082.847889881303" z="10984.056421490472" />
-        <Forward x="-0.746092856" y="0.124805242" z="0.6540406" />
-        <Up x="-0.5962239" y="-0.56251" z="-0.5727997" />
+        <Position x="-58629.615062483907" y="-76672.448503097272" z="-102959.41409911329" />
+        <Forward x="0.04474081" y="0.803691447" z="0.5933623" />
+        <Up x="0.9729304" y="-0.169855759" z="0.1567033" />
         <Orientation>
-          <X>0.792616963</X>
-          <Y>-0.445845962</Y>
-          <Z>0.39116922</Z>
-          <W>-0.1413023</W>
+          <X>0.705327034</X>
+          <Y>0.546987057</Y>
+          <Z>-0.2957053</Z>
+          <W>0.34040755</W>
         </Orientation>
       </PositionAndOrientation>
       <LocalPositionAndOrientation xsi:nil="true" />
@@ -296,27 +328,28 @@
       </Battery>
       <LightEnabled>true</LightEnabled>
       <UsingLadder xsi:nil="true" />
-      <HeadAngle x="3.63066053" y="0" />
+      <HeadAngle x="0" y="0" />
       <LinearVelocity x="0" y="0" z="0" />
       <AutoenableJetpackDelay>0</AutoenableJetpackDelay>
-      <JetpackEnabled>false</JetpackEnabled>
+      <JetpackEnabled>true</JetpackEnabled>
       <ColorMaskHSV x="0.08611111" y="0.199999988" z="-0.27696225" />
       <LootingCounter>0</LootingCounter>
       <DisplayName>Catopia Rex</DisplayName>
       <IsInFirstPersonView>true</IsInFirstPersonView>
       <EnableBroadcasting>true</EnableBroadcasting>
-      <OxygenLevel>0.886238635</OxygenLevel>
+      <OxygenLevel>0.570341</OxygenLevel>
       <EnvironmentOxygenLevel>0</EnvironmentOxygenLevel>
       <StoredGases>
         <StoredGas>
           <Id Type="MyObjectBuilder_GasProperties" Subtype="Hydrogen" />
-          <FillLevel>0.9243663</FillLevel>
+          <FillLevel>0.914624</FillLevel>
         </StoredGas>
         <StoredGas>
           <Id Type="MyObjectBuilder_GasProperties" Subtype="Oxygen" />
-          <FillLevel>0.886238635</FillLevel>
+          <FillLevel>0.570341</FillLevel>
         </StoredGas>
       </StoredGases>
+      <MovementState>Flying</MovementState>
       <EnabledComponents>
         <string>RagdollComponent</string>
         <string>InventorySpawnComponent</string>
@@ -420,6 +453,55 @@
       <SpherizeWithDistance>true</SpherizeWithDistance>
       <PlanetGenerator>Moon</PlanetGenerator>
       <Seed>12345</Seed>
+    </MyObjectBuilder_EntityBase>
+    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
+      <SubtypeName />
+      <EntityId>75314226221180470</EntityId>
+      <PersistentFlags>CastShadows InScene</PersistentFlags>
+      <Name>75314226221180470</Name>
+      <PositionAndOrientation>
+        <Position x="-58630.699584527916" y="-76674.122979841923" z="-102960.81884241293" />
+        <Forward x="-0.253791869" y="0.809211" z="-0.529874742" />
+        <Up x="0.7617399" y="-0.170397237" z="-0.6250737" />
+        <Orientation>
+          <X>-0.105376519</X>
+          <Y>-0.473242432</Y>
+          <Z>0.7576902</Z>
+          <W>-0.436855733</W>
+        </Orientation>
+      </PositionAndOrientation>
+      <LocalPositionAndOrientation xsi:nil="true" />
+      <GridSizeEnum>Large</GridSizeEnum>
+      <CubeBlocks>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+          <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
+          <EntityId>75314226221180471</EntityId>
+          <Name>75314226221180471</Name>
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+          <CurrentStoredPower>0.900000036</CurrentStoredPower>
+          <ProducerEnabled>true</ProducerEnabled>
+          <MaxStoredPower>0</MaxStoredPower>
+          <SemiautoEnabled>false</SemiautoEnabled>
+          <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
+          <ChargeMode>0</ChargeMode>
+        </MyObjectBuilder_CubeBlock>
+      </CubeBlocks>
+      <IsStatic>true</IsStatic>
+      <IsUnsupportedStation>true</IsUnsupportedStation>
+      <DisplayName>Space</DisplayName>
+      <DestructibleBlocks>true</DestructibleBlocks>
+      <IsRespawnGrid>false</IsRespawnGrid>
+      <LocalCoordSys>0</LocalCoordSys>
+      <TargetingTargets />
+      <NPCGridClaimElapsed xsi:nil="true" />
     </MyObjectBuilder_EntityBase>
   </SectorObjects>
 </MyObjectBuilder_Sector>

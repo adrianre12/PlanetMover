@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <From>
+    <PlanetEntityId>3961408087623864766</PlanetEntityId>
+    <PlanetCenter X="16384" Y="16384" Z="16384" />
+    <!--This is the Position shown in the SBS file -->
+    <PlanetPosition X="0" Y="0" Z="0" />
+<!--This is set to planet Maximum Radius plus 1000m, set to 0 to disable any other objects. -->
+<IncludeEntitiesRadius>10785</IncludeEntitiesRadius>
+  </From>
+  <To>
+    <!-- Change this position to the GPS values of the new location -->
+    <PlanetCenter X="-95613.7534280144" Y="15978.7543238399" Z="-64088.1354513491" />
+  </To>
+</Configuration>
+
+
+
+

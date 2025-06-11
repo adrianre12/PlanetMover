@@ -2,7 +2,7 @@
   "profiles": {
     "WorldMover": {
       "commandName": "Project",
-      "commandLineArgs": "Move Config-WorldMover.xml  LargeSANDBOX_0_0_0_.sbs Output.tmp",
+      "commandLineArgs": "Move TestConfig.xml  SANDBOX_0_0_0_.sbs Output.tmp",
       "workingDirectory": "C:\\Users\\Adrian\\source\\repos\\WorldMover\\Example"
     }
   }

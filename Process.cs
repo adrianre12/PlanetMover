@@ -257,6 +257,7 @@ namespace WorldMover
                     flush = false;
                     isEntityBase = false;
                     isPlanet = false;
+                    isThePlanet = false;
                     isPositionAndOrientation = false;
                     outputSectorObject = false;
                     continue;

@@ -51,7 +51,7 @@
                 default:
                     {
                         Console.WriteLine("Unimplemented Mode:");
-                        System.Environment.Exit(1);
+                        UsageAndExit();
                         break;
                     }
             }
@@ -94,7 +94,7 @@
             Console.WriteLine("Mode: Remove - Delete planet and grids");
             Console.WriteLine("      WorldMover.exe Remove ConfigFileName InputFileName OutputFileName\n");
             Console.WriteLine("Mode: Config - Create a new default config file");
-            Console.WriteLine("      WorldMover.exe Create ConfigFileName");
+            Console.WriteLine("      WorldMover.exe Config ConfigFileName");
             System.Environment.Exit(1);
         }
 

@@ -22,11 +22,561 @@
   <SectorObjects>
     <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
       <SubtypeName />
+      <EntityId>75314226221180470</EntityId>
+      <PersistentFlags>CastShadows InScene</PersistentFlags>
+      <Name>75314226221180470</Name>
+      <PositionAndOrientation>
+        <Position x="-58630.699584527916" y="-76674.122979841923" z="-102960.81884241293" />
+        <Forward x="-0.2537918" y="0.809210956" z="-0.529874861" />
+        <Up x="0.76174" y="-0.170397326" z="-0.625073552" />
+        <Orientation>
+          <X>-0.105376542</X>
+          <Y>-0.473242372</Y>
+          <Z>0.7576902</Z>
+          <W>-0.4368558</W>
+        </Orientation>
+      </PositionAndOrientation>
+      <LocalPositionAndOrientation xsi:nil="true" />
+      <GridSizeEnum>Large</GridSizeEnum>
+      <CubeBlocks>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+          <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
+          <EntityId>75314226221180471</EntityId>
+          <Name>75314226221180471</Name>
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+          <CurrentStoredPower>0.900000036</CurrentStoredPower>
+          <ProducerEnabled>true</ProducerEnabled>
+          <MaxStoredPower>0</MaxStoredPower>
+          <SemiautoEnabled>false</SemiautoEnabled>
+          <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
+          <ChargeMode>0</ChargeMode>
+        </MyObjectBuilder_CubeBlock>
+      </CubeBlocks>
+      <IsStatic>true</IsStatic>
+      <IsUnsupportedStation>true</IsUnsupportedStation>
+      <DisplayName>Space</DisplayName>
+      <DestructibleBlocks>true</DestructibleBlocks>
+      <IsRespawnGrid>false</IsRespawnGrid>
+      <LocalCoordSys>0</LocalCoordSys>
+      <TargetingTargets />
+      <NPCGridClaimElapsed xsi:nil="true" />
+    </MyObjectBuilder_EntityBase>
+    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
+      <SubtypeName />
+      <EntityId>114245465248682044</EntityId>
+      <PersistentFlags>CastShadows InScene</PersistentFlags>
+      <Name>114245465248682044</Name>
+      <PositionAndOrientation>
+        <Position x="10759.239550959326" y="11085.653541298583" z="10985.965020026852" />
+        <Forward x="-0.7618493" y="0.170010552" z="0.625045657" />
+        <Up x="-0.595884144" y="-0.562297165" z="-0.573362" />
+        <Orientation>
+          <X>0.781237245</X>
+          <Y>-0.449656755</Y>
+          <Z>0.413300067</Z>
+          <W>-0.129074588</W>
+        </Orientation>
+      </PositionAndOrientation>
+      <LocalPositionAndOrientation xsi:nil="true" />
+      <GridSizeEnum>Large</GridSizeEnum>
+      <CubeBlocks>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ShipConnector">
+          <SubtypeName>Connector</SubtypeName>
+          <EntityId>83201664853142828</EntityId>
+          <Name>83201664853142828</Name>
+          <Min x="0" y="1" z="-2" />
+          <BlockOrientation Forward="Backward" Up="Right" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <DeformationRatio>0.5</DeformationRatio>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>8</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyTimerComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_TimerComponent">
+                  <Repeat>true</Repeat>
+                  <TimeToEvent>0</TimeToEvent>
+                  <SetTimeMinutes>0</SetTimeMinutes>
+                  <TimerEnabled>true</TimerEnabled>
+                  <RemoveEntityOnTimer>false</RemoveEntityOnTimer>
+                  <TimerType>Frame10</TimerType>
+                  <FramesFromLastTrigger>60</FramesFromLastTrigger>
+                  <TimerTickInFrames>80</TimerTickInFrames>
+                  <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <CustomName>Ship Connector</CustomName>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>2</NumberInGrid>
+          <Enabled>true</Enabled>
+          <ConnectedEntityId>124784202186373831</ConnectedEntityId>
+          <MasterToSlaveTransform>
+            <Position x="-3.637978807091713E-12" y="4.1624105051596416E-08" z="-2.5" />
+            <Forward x="1.66533692E-16" y="0" z="0.999999762" />
+            <Up x="0.9999999" y="3.57627869E-06" z="-1.66533692E-16" />
+            <Orientation>
+              <X>0.7071055</X>
+              <Y>0.707108</Y>
+              <Z>-5.887846E-17</Z>
+              <W>-5.887867E-17</W>
+            </Orientation>
+          </MasterToSlaveTransform>
+          <MasterToSlaveGrid xsi:nil="true" />
+          <IsMaster>false</IsMaster>
+          <TradingEnabled>false</TradingEnabled>
+          <AutoUnlockTime>0</AutoUnlockTime>
+          <TimeOfConnection>151</TimeOfConnection>
+          <IsParkingEnabled>true</IsParkingEnabled>
+          <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
+          <IsApproaching>true</IsApproaching>
+          <IsConnecting>true</IsConnecting>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Cockpit">
+          <SubtypeName>LargeBlockCockpitSeat</SubtypeName>
+          <EntityId>123967731505458966</EntityId>
+          <Name>123967731505458966</Name>
+          <Min x="0" y="1" z="-3" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>1</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyMultiTextPanelComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+                  <TextPanelsContents>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ArtificialHorizon</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_EnergyHydrogen</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_Gravity</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ClockAnalog</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                  </TextPanelsContents>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <CustomName>Ship Cockpit</CustomName>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <UseSingleWeaponMode>false</UseSingleWeaponMode>
+          <Toolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </Toolbar>
+          <SelectedGunId xsi:nil="true" />
+          <BuildToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </BuildToolbar>
+          <OnLockedToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </OnLockedToolbar>
+          <PilotRelativeWorld>
+            <Position x="2.1365242004394531" y="-1.6904296875" z="0.0067706601694226265" />
+            <Forward x="-0.9826886" y="0.0004959944" z="0.185264409" />
+            <Up x="0.000190433217" y="0.999998569" z="-0.00166711537" />
+            <Orientation>
+              <X>-0.000458721071</X>
+              <Y>0.769825935</Y>
+              <Z>-0.000702467165</Z>
+              <W>0.638253331</W>
+            </Orientation>
+          </PilotRelativeWorld>
+          <PilotGunDefinition xsi:nil="true" />
+          <IsInFirstPersonView>true</IsInFirstPersonView>
+          <OxygenLevel>0</OxygenLevel>
+          <PilotJetpackEnabled xsi:nil="true" />
+          <TargetData>
+            <TargetId>0</TargetId>
+            <IsTargetLocked>false</IsTargetLocked>
+            <LockingProgress>0</LockingProgress>
+          </TargetData>
+          <SitAnimation>0</SitAnimation>
+        </MyObjectBuilder_CubeBlock>
+      </CubeBlocks>
+      <DisplayName>Ship</DisplayName>
+      <DestructibleBlocks>true</DestructibleBlocks>
+      <IsRespawnGrid>false</IsRespawnGrid>
+      <LocalCoordSys>0</LocalCoordSys>
+      <TargetingTargets />
+      <NPCGridClaimElapsed xsi:nil="true" />
+    </MyObjectBuilder_EntityBase>
+    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
+      <SubtypeName />
       <EntityId>73675067303155917</EntityId>
       <PersistentFlags>CastShadows InScene</PersistentFlags>
       <Name>73675067303155917</Name>
       <PositionAndOrientation>
-        <Position x="10759.237533857849" y="11085.651060095279" z="10985.962048027191" />
+        <Position x="10759.237533857842" y="11085.651060095279" z="10985.962048027199" />
         <Forward x="-0.7617399" y="0.170397252" z="0.6250737" />
         <Up x="-0.5961057" y="-0.562265337" z="-0.573162854" />
         <Orientation>
@@ -79,7 +629,7 @@
           <ComponentContainer>
             <Components>
               <ComponentData>
-                <TypeId>MyModStorageComponentBase</TypeId>
+                <TypeId>MyModStorageComponent</TypeId>
                 <Component xsi:type="MyObjectBuilder_ModStorageComponent">
                   <Storage>
                     <dictionary>
@@ -115,60 +665,1368 @@
           <NumberInGrid>1</NumberInGrid>
           <Enabled>true</Enabled>
         </MyObjectBuilder_CubeBlock>
-      </CubeBlocks>
-      <IsStatic>true</IsStatic>
-      <DisplayName>Moon block 1</DisplayName>
-      <DestructibleBlocks>true</DestructibleBlocks>
-      <IsRespawnGrid>false</IsRespawnGrid>
-      <LocalCoordSys>2</LocalCoordSys>
-      <TargetingTargets />
-      <NPCGridClaimElapsed xsi:nil="true" />
-    </MyObjectBuilder_EntityBase>
-    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_Character">
-      <SubtypeName>Default_Astronaut</SubtypeName>
-      <EntityId>124168712738897777</EntityId>
-      <PersistentFlags>CastShadows InScene</PersistentFlags>
-      <Name>124168712738897777</Name>
-      <PositionAndOrientation>
-        <Position x="-58629.615062483907" y="-76672.448503097272" z="-102959.41409911329" />
-        <Forward x="0.04474081" y="0.803691447" z="0.5933623" />
-        <Up x="0.9729304" y="-0.169855759" z="0.1567033" />
-        <Orientation>
-          <X>0.705327034</X>
-          <Y>0.546987057</Y>
-          <Z>-0.2957053</Z>
-          <W>0.34040755</W>
-        </Orientation>
-      </PositionAndOrientation>
-      <LocalPositionAndOrientation xsi:nil="true" />
-      <ComponentContainer>
-        <Components>
-          <ComponentData>
-            <TypeId>MyEntityStatComponent</TypeId>
-            <Component xsi:type="MyObjectBuilder_CharacterStatComponent">
-              <Stats>
-                <MyObjectBuilder_EntityStat>
-                  <SubtypeName>SpaceCharacterHealth</SubtypeName>
-                  <Value>1</Value>
-                  <MaxValue>1</MaxValue>
-                  <StatRegenAmountMultiplier>1</StatRegenAmountMultiplier>
-                  <StatRegenAmountMultiplierDuration>0</StatRegenAmountMultiplierDuration>
-                </MyObjectBuilder_EntityStat>
-              </Stats>
-              <ScriptNames>
-                <string>SpaceStatEffect</string>
-              </ScriptNames>
-            </Component>
-          </ComponentData>
-          <ComponentData>
-            <TypeId>MyAssetModifierComponent</TypeId>
-            <Component xsi:type="MyObjectBuilder_AssetModifierComponent">
-              <AssetModifiers />
-            </Component>
-          </ComponentData>
-          <ComponentData>
-            <TypeId>MyInventoryBase</TypeId>
-            <Component xsi:type="MyObjectBuilder_Inventory">
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Cockpit">
+          <SubtypeName>LargeBlockCockpitSeat</SubtypeName>
+          <EntityId>90711686368978453</EntityId>
+          <Name>90711686368978453</Name>
+          <Min x="2" y="1" z="0" />
+          <BlockOrientation Forward="Right" Up="Up" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>1</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyMultiTextPanelComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+                  <TextPanelsContents>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ArtificialHorizon</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_EnergyHydrogen</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_Gravity</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ClockAnalog</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                  </TextPanelsContents>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <UseSingleWeaponMode>false</UseSingleWeaponMode>
+          <Toolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </Toolbar>
+          <SelectedGunId xsi:nil="true" />
+          <BuildToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </BuildToolbar>
+          <OnLockedToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </OnLockedToolbar>
+          <PilotRelativeWorld>
+            <Position x="4.220369815826416" y="-1.4748731851577759" z="-1.9578714370727539" />
+            <Forward x="-0.878234446" y="1.24083317E-05" z="0.4782303" />
+            <Up x="-0.000364843319" y="0.9999997" z="-0.0006959541" />
+            <Orientation>
+              <X>-0.00033456707</X>
+              <Y>0.859717965</Y>
+              <Z>-0.000205986842</Z>
+              <W>0.510768831</W>
+            </Orientation>
+          </PilotRelativeWorld>
+          <PilotGunDefinition xsi:nil="true" />
+          <IsInFirstPersonView>true</IsInFirstPersonView>
+          <OxygenLevel>0</OxygenLevel>
+          <PilotJetpackEnabled xsi:nil="true" />
+          <TargetData>
+            <TargetId>0</TargetId>
+            <IsTargetLocked>false</IsTargetLocked>
+            <LockingProgress>0</LockingProgress>
+          </TargetData>
+          <SitAnimation>0</SitAnimation>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ShipConnector">
+          <SubtypeName>Connector</SubtypeName>
+          <EntityId>124784202186373831</EntityId>
+          <Name>124784202186373831</Name>
+          <Min x="0" y="1" z="-1" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <DeformationRatio>0.5</DeformationRatio>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>8</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyTimerComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_TimerComponent">
+                  <Repeat>true</Repeat>
+                  <TimeToEvent>0</TimeToEvent>
+                  <SetTimeMinutes>0</SetTimeMinutes>
+                  <TimerEnabled>true</TimerEnabled>
+                  <RemoveEntityOnTimer>false</RemoveEntityOnTimer>
+                  <TimerType>Frame10</TimerType>
+                  <FramesFromLastTrigger>0</FramesFromLastTrigger>
+                  <TimerTickInFrames>80</TimerTickInFrames>
+                  <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+          <ConnectedEntityId>83201664853142828</ConnectedEntityId>
+          <MasterToSlaveTransform>
+            <Position x="-3.637978807091713E-12" y="4.1624105051596416E-08" z="-2.5" />
+            <Forward x="1.66533692E-16" y="0" z="0.999999762" />
+            <Up x="0.9999999" y="3.57627869E-06" z="-1.66533692E-16" />
+            <Orientation>
+              <X>0.7071055</X>
+              <Y>0.707108</Y>
+              <Z>-5.887846E-17</Z>
+              <W>-5.887867E-17</W>
+            </Orientation>
+          </MasterToSlaveTransform>
+          <MasterToSlaveGrid>
+            <OrientationOffset>
+              <X>0.7070984</X>
+              <Y>0.707115054</Y>
+              <Z>0.000202454583</Z>
+              <W>1.07200531E-05</W>
+            </OrientationOffset>
+            <PositionOffset>
+              <X>-2.49536753</X>
+              <Y>0.000197602873</Y>
+              <Z>-5.001067</Z>
+            </PositionOffset>
+            <OrientationAsVector>
+              <X>0.7070984</X>
+              <Y>0.707115054</Y>
+              <Z>0.000202454583</Z>
+              <W>1.07200531E-05</W>
+            </OrientationAsVector>
+          </MasterToSlaveGrid>
+          <IsMaster>true</IsMaster>
+          <TradingEnabled>false</TradingEnabled>
+          <AutoUnlockTime>0</AutoUnlockTime>
+          <TimeOfConnection>151</TimeOfConnection>
+          <IsParkingEnabled>false</IsParkingEnabled>
+          <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
+          <IsApproaching>true</IsApproaching>
+          <IsConnecting>true</IsConnecting>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_MergeBlock">
+          <SubtypeName>LargeShipMergeBlock</SubtypeName>
+          <EntityId>105720227914629235</EntityId>
+          <Name>105720227914629235</Name>
+          <Min x="-1" y="1" z="0" />
+          <BlockOrientation Forward="Forward" Up="Down" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <CustomName>Merge Block 1</CustomName>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_MergeBlock">
+          <SubtypeName>LargeShipMergeBlock</SubtypeName>
+          <EntityId>128225188304527243</EntityId>
+          <Name>128225188304527243</Name>
+          <Min x="-2" y="1" z="0" />
+          <BlockOrientation Forward="Up" Up="Backward" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>2</NumberInGrid>
+          <Enabled>true</Enabled>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Cockpit">
+          <SubtypeName>LargeBlockCockpitSeat</SubtypeName>
+          <EntityId>129230906903850957</EntityId>
+          <Name>129230906903850957</Name>
+          <Min x="-3" y="1" z="0" />
+          <BlockOrientation Forward="Left" Up="Up" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>1</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyMultiTextPanelComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+                  <TextPanelsContents>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ArtificialHorizon</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_EnergyHydrogen</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_Gravity</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ClockAnalog</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <CustomizeScripts>true</CustomizeScripts>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                  </TextPanelsContents>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <CustomName>Merge Cockpit</CustomName>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>2</NumberInGrid>
+          <UseSingleWeaponMode>false</UseSingleWeaponMode>
+          <Toolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </Toolbar>
+          <SelectedGunId xsi:nil="true" />
+          <BuildToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </BuildToolbar>
+          <OnLockedToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </OnLockedToolbar>
+          <PilotRelativeWorld>
+            <Position x="3.5576000213623047" y="-2.4435365200042725" z="-0.087293036282062531" />
+            <Forward x="-0.9999852" y="0.00117543724" z="-0.005303772" />
+            <Up x="0.001179901" y="0.9999989" z="-0.0008385549" />
+            <Orientation>
+              <X>0.000118791359</X>
+              <Y>0.705229044</Y>
+              <Z>-0.000713949557</Z>
+              <W>0.7089791</W>
+            </Orientation>
+          </PilotRelativeWorld>
+          <PilotGunDefinition xsi:nil="true" />
+          <IsInFirstPersonView>true</IsInFirstPersonView>
+          <OxygenLevel>0</OxygenLevel>
+          <PilotJetpackEnabled xsi:nil="true" />
+          <TargetData>
+            <TargetId>0</TargetId>
+            <IsTargetLocked>false</IsTargetLocked>
+            <LockingProgress>0</LockingProgress>
+          </TargetData>
+          <SitAnimation>0</SitAnimation>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CryoChamber">
+          <SubtypeName>LargeBlockCryoChamber</SubtypeName>
+          <EntityId>119851919633445228</EntityId>
+          <Name>119851919633445228</Name>
+          <Min x="1" y="2" z="0" />
+          <BlockOrientation Forward="Right" Up="Up" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyHierarchyComponentBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_HierarchyComponentBase">
+                  <Children>
+                    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_Character">
+                      <SubtypeName>Default_Astronaut</SubtypeName>
+                      <EntityId>124168712738897777</EntityId>
+                      <PersistentFlags>CastShadows InScene</PersistentFlags>
+                      <Name>124168712738897777</Name>
+                      <PositionAndOrientation>
+                        <Position x="10757.668388996182" y="11080.862151312058" z="10985.355298082541" />
+                        <Forward x="0.146423921" y="-0.8945534" z="0.4222964" />
+                        <Up x="-0.6311198" y="-0.4132058" z="-0.6564669" />
+                        <Orientation>
+                          <X>0.805798054</X>
+                          <Y>-0.248671785</Y>
+                          <Z>-0.2393582</Z>
+                          <W>-0.4812063</W>
+                        </Orientation>
+                      </PositionAndOrientation>
+                      <LocalPositionAndOrientation>
+                        <Position x="4.6342393034137785E-08" y="-1.0242197513580322" z="-0.65549993515014648" />
+                        <Forward x="3.03615266E-08" y="0.173647642" z="-0.984807849" />
+                        <Up x="1.7218926E-07" y="0.984807849" z="0.173647642" />
+                        <Orientation>
+                          <X>0.0871554762</X>
+                          <Y>-7.619378E-09</Y>
+                          <Z>-8.70901E-08</Z>
+                          <W>0.9961947</W>
+                        </Orientation>
+                      </LocalPositionAndOrientation>
+                      <ComponentContainer>
+                        <Components>
+                          <ComponentData>
+                            <TypeId>MyEntityStatComponent</TypeId>
+                            <Component xsi:type="MyObjectBuilder_CharacterStatComponent">
+                              <Stats>
+                                <MyObjectBuilder_EntityStat>
+                                  <SubtypeName>SpaceCharacterHealth</SubtypeName>
+                                  <Value>1</Value>
+                                  <MaxValue>1</MaxValue>
+                                  <StatRegenAmountMultiplier>1</StatRegenAmountMultiplier>
+                                  <StatRegenAmountMultiplierDuration>0</StatRegenAmountMultiplierDuration>
+                                </MyObjectBuilder_EntityStat>
+                              </Stats>
+                              <ScriptNames>
+                                <string>SpaceStatEffect</string>
+                              </ScriptNames>
+                            </Component>
+                          </ComponentData>
+                          <ComponentData>
+                            <TypeId>MyAssetModifierComponent</TypeId>
+                            <Component xsi:type="MyObjectBuilder_AssetModifierComponent">
+                              <AssetModifiers />
+                            </Component>
+                          </ComponentData>
+                          <ComponentData>
+                            <TypeId>MyInventoryBase</TypeId>
+                            <Component xsi:type="MyObjectBuilder_Inventory">
+                              <CanPutItems>true</CanPutItems>
+                              <Items>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                                    <SubtypeName>AngleGrinderItem</SubtypeName>
+                                  </PhysicalContent>
+                                  <ItemId>0</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                                    <SubtypeName>HandDrillItem</SubtypeName>
+                                    <GunEntity xsi:type="MyObjectBuilder_HandDrill">
+                                      <SubtypeName>HandDrill</SubtypeName>
+                                      <EntityId>89955202634312568</EntityId>
+                                      <PersistentFlags>None</PersistentFlags>
+                                    </GunEntity>
+                                  </PhysicalContent>
+                                  <ItemId>1</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                                    <SubtypeName>WelderItem</SubtypeName>
+                                  </PhysicalContent>
+                                  <ItemId>2</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                                    <SubtypeName>AutomaticRifleItem</SubtypeName>
+                                    <GunEntity xsi:type="MyObjectBuilder_AutomaticRifle">
+                                      <SubtypeName>RifleGun</SubtypeName>
+                                      <EntityId>0</EntityId>
+                                      <PersistentFlags>None</PersistentFlags>
+                                    </GunEntity>
+                                  </PhysicalContent>
+                                  <ItemId>3</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>10</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
+                                    <SubtypeName>AutomaticRifleGun_Mag_20rd</SubtypeName>
+                                    <ProjectilesCount>0</ProjectilesCount>
+                                  </PhysicalContent>
+                                  <ItemId>4</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_GasContainerObject">
+                                    <SubtypeName>HydrogenBottle</SubtypeName>
+                                    <GasLevel>1</GasLevel>
+                                  </PhysicalContent>
+                                  <ItemId>5</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                                <MyObjectBuilder_InventoryItem>
+                                  <Amount>1</Amount>
+                                  <PhysicalContent xsi:type="MyObjectBuilder_OxygenContainerObject">
+                                    <SubtypeName>OxygenBottle</SubtypeName>
+                                    <GasLevel>0.15473637</GasLevel>
+                                    <OxygenLevel>0</OxygenLevel>
+                                  </PhysicalContent>
+                                  <ItemId>6</ItemId>
+                                </MyObjectBuilder_InventoryItem>
+                              </Items>
+                              <nextItemId>7</nextItemId>
+                              <Volume>0.4</Volume>
+                              <Mass>9223372036854.775807</Mass>
+                              <MaxItemCount>2147483647</MaxItemCount>
+                              <Size xsi:nil="true" />
+                              <InventoryFlags />
+                              <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                            </Component>
+                          </ComponentData>
+                        </Components>
+                      </ComponentContainer>
+                      <CharacterModel>Default_Astronaut</CharacterModel>
+                      <Inventory>
+                        <CanPutItems>true</CanPutItems>
+                        <Items>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                              <SubtypeName>AngleGrinderItem</SubtypeName>
+                            </PhysicalContent>
+                            <ItemId>0</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                              <SubtypeName>HandDrillItem</SubtypeName>
+                              <GunEntity xsi:type="MyObjectBuilder_HandDrill">
+                                <SubtypeName>HandDrill</SubtypeName>
+                                <EntityId>89955202634312568</EntityId>
+                                <PersistentFlags>None</PersistentFlags>
+                              </GunEntity>
+                            </PhysicalContent>
+                            <ItemId>1</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                              <SubtypeName>WelderItem</SubtypeName>
+                            </PhysicalContent>
+                            <ItemId>2</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                              <SubtypeName>AutomaticRifleItem</SubtypeName>
+                              <GunEntity xsi:type="MyObjectBuilder_AutomaticRifle">
+                                <SubtypeName>RifleGun</SubtypeName>
+                                <EntityId>0</EntityId>
+                                <PersistentFlags>None</PersistentFlags>
+                              </GunEntity>
+                            </PhysicalContent>
+                            <ItemId>3</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>10</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
+                              <SubtypeName>AutomaticRifleGun_Mag_20rd</SubtypeName>
+                              <ProjectilesCount>0</ProjectilesCount>
+                            </PhysicalContent>
+                            <ItemId>4</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_GasContainerObject">
+                              <SubtypeName>HydrogenBottle</SubtypeName>
+                              <GasLevel>1</GasLevel>
+                            </PhysicalContent>
+                            <ItemId>5</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                          <MyObjectBuilder_InventoryItem>
+                            <Amount>1</Amount>
+                            <PhysicalContent xsi:type="MyObjectBuilder_OxygenContainerObject">
+                              <SubtypeName>OxygenBottle</SubtypeName>
+                              <GasLevel>0.15473637</GasLevel>
+                              <OxygenLevel>0</OxygenLevel>
+                            </PhysicalContent>
+                            <ItemId>6</ItemId>
+                          </MyObjectBuilder_InventoryItem>
+                        </Items>
+                        <nextItemId>7</nextItemId>
+                        <Volume>0.4</Volume>
+                        <Mass>9223372036854.775807</Mass>
+                        <MaxItemCount>2147483647</MaxItemCount>
+                        <Size xsi:nil="true" />
+                        <InventoryFlags />
+                        <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                      </Inventory>
+                      <Battery>
+                        <CurrentCapacity>9.004631E-06</CurrentCapacity>
+                        <RegenEffects />
+                      </Battery>
+                      <LightEnabled>false</LightEnabled>
+                      <UsingLadder xsi:nil="true" />
+                      <HeadAngle x="0" y="0" />
+                      <LinearVelocity x="0" y="0" z="0" />
+                      <AutoenableJetpackDelay>-1</AutoenableJetpackDelay>
+                      <JetpackEnabled>false</JetpackEnabled>
+                      <ColorMaskHSV x="0.08611111" y="0.199999988" z="-0.27696225" />
+                      <LootingCounter>0</LootingCounter>
+                      <DisplayName>Catopia Rex</DisplayName>
+                      <IsInFirstPersonView>true</IsInFirstPersonView>
+                      <EnableBroadcasting>true</EnableBroadcasting>
+                      <OxygenLevel>0.670081556</OxygenLevel>
+                      <EnvironmentOxygenLevel>0</EnvironmentOxygenLevel>
+                      <StoredGases>
+                        <StoredGas>
+                          <Id Type="MyObjectBuilder_GasProperties" Subtype="Hydrogen" />
+                          <FillLevel>0.761933267</FillLevel>
+                        </StoredGas>
+                        <StoredGas>
+                          <Id Type="MyObjectBuilder_GasProperties" Subtype="Oxygen" />
+                          <FillLevel>0.670081556</FillLevel>
+                        </StoredGas>
+                      </StoredGases>
+                      <MovementState>Sitting</MovementState>
+                      <EnabledComponents>
+                        <string>RagdollComponent</string>
+                        <string>InventorySpawnComponent</string>
+                      </EnabledComponents>
+                      <NeedsOxygenFromSuit>false</NeedsOxygenFromSuit>
+                      <OwningPlayerIdentityId>144115188075855895</OwningPlayerIdentityId>
+                      <IsPersistenceCharacter>false</IsPersistenceCharacter>
+                      <IsStartingCharacterForLobby>false</IsStartingCharacterForLobby>
+                      <RelativeDampeningEntity>0</RelativeDampeningEntity>
+                      <UsingLadderInfo xsi:nil="true" />
+                      <EnableBroadcastingPlayerToggle>true</EnableBroadcastingPlayerToggle>
+                    </MyObjectBuilder_EntityBase>
+                  </Children>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>1</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <UseSingleWeaponMode>false</UseSingleWeaponMode>
+          <Toolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </Toolbar>
+          <SelectedGunId xsi:nil="true" />
+          <HorizonIndicatorEnabled>false</HorizonIndicatorEnabled>
+          <BuildToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </BuildToolbar>
+          <OnLockedToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </OnLockedToolbar>
+          <IsTargetLockingEnabled>false</IsTargetLockingEnabled>
+          <Pilot>
+            <SubtypeName>Default_Astronaut</SubtypeName>
+            <EntityId>124168712738897777</EntityId>
+            <PersistentFlags>CastShadows InScene</PersistentFlags>
+            <Name>124168712738897777</Name>
+            <PositionAndOrientation>
+              <Position x="10757.668388996182" y="11080.862151312058" z="10985.355298082541" />
+              <Forward x="0.146423921" y="-0.8945534" z="0.4222964" />
+              <Up x="-0.6311198" y="-0.4132058" z="-0.6564669" />
+              <Orientation>
+                <X>0.805798054</X>
+                <Y>-0.248671785</Y>
+                <Z>-0.2393582</Z>
+                <W>-0.4812063</W>
+              </Orientation>
+            </PositionAndOrientation>
+            <LocalPositionAndOrientation xsi:nil="true" />
+            <ComponentContainer>
+              <Components>
+                <ComponentData>
+                  <TypeId>MyEntityStatComponent</TypeId>
+                  <Component xsi:type="MyObjectBuilder_CharacterStatComponent">
+                    <Stats>
+                      <MyObjectBuilder_EntityStat>
+                        <SubtypeName>SpaceCharacterHealth</SubtypeName>
+                        <Value>1</Value>
+                        <MaxValue>1</MaxValue>
+                        <StatRegenAmountMultiplier>1</StatRegenAmountMultiplier>
+                        <StatRegenAmountMultiplierDuration>0</StatRegenAmountMultiplierDuration>
+                      </MyObjectBuilder_EntityStat>
+                    </Stats>
+                    <ScriptNames>
+                      <string>SpaceStatEffect</string>
+                    </ScriptNames>
+                  </Component>
+                </ComponentData>
+                <ComponentData>
+                  <TypeId>MyAssetModifierComponent</TypeId>
+                  <Component xsi:type="MyObjectBuilder_AssetModifierComponent">
+                    <AssetModifiers />
+                  </Component>
+                </ComponentData>
+                <ComponentData>
+                  <TypeId>MyInventoryBase</TypeId>
+                  <Component xsi:type="MyObjectBuilder_Inventory">
+                    <CanPutItems>true</CanPutItems>
+                    <Items>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                          <SubtypeName>AngleGrinderItem</SubtypeName>
+                        </PhysicalContent>
+                        <ItemId>0</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                          <SubtypeName>HandDrillItem</SubtypeName>
+                          <GunEntity xsi:type="MyObjectBuilder_HandDrill">
+                            <SubtypeName>HandDrill</SubtypeName>
+                            <EntityId>89955202634312568</EntityId>
+                            <PersistentFlags>None</PersistentFlags>
+                          </GunEntity>
+                        </PhysicalContent>
+                        <ItemId>1</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                          <SubtypeName>WelderItem</SubtypeName>
+                        </PhysicalContent>
+                        <ItemId>2</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
+                          <SubtypeName>AutomaticRifleItem</SubtypeName>
+                          <GunEntity xsi:type="MyObjectBuilder_AutomaticRifle">
+                            <SubtypeName>RifleGun</SubtypeName>
+                            <EntityId>0</EntityId>
+                            <PersistentFlags>None</PersistentFlags>
+                          </GunEntity>
+                        </PhysicalContent>
+                        <ItemId>3</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>10</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
+                          <SubtypeName>AutomaticRifleGun_Mag_20rd</SubtypeName>
+                          <ProjectilesCount>0</ProjectilesCount>
+                        </PhysicalContent>
+                        <ItemId>4</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_GasContainerObject">
+                          <SubtypeName>HydrogenBottle</SubtypeName>
+                          <GasLevel>1</GasLevel>
+                        </PhysicalContent>
+                        <ItemId>5</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                      <MyObjectBuilder_InventoryItem>
+                        <Amount>1</Amount>
+                        <PhysicalContent xsi:type="MyObjectBuilder_OxygenContainerObject">
+                          <SubtypeName>OxygenBottle</SubtypeName>
+                          <GasLevel>0.15473637</GasLevel>
+                          <OxygenLevel>0</OxygenLevel>
+                        </PhysicalContent>
+                        <ItemId>6</ItemId>
+                      </MyObjectBuilder_InventoryItem>
+                    </Items>
+                    <nextItemId>7</nextItemId>
+                    <Volume>0.4</Volume>
+                    <Mass>9223372036854.775807</Mass>
+                    <MaxItemCount>2147483647</MaxItemCount>
+                    <Size xsi:nil="true" />
+                    <InventoryFlags />
+                    <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                  </Component>
+                </ComponentData>
+              </Components>
+            </ComponentContainer>
+            <CharacterModel>Default_Astronaut</CharacterModel>
+            <Inventory>
               <CanPutItems>true</CanPutItems>
               <Items>
                 <MyObjectBuilder_InventoryItem>
@@ -229,7 +2087,7 @@
                   <Amount>1</Amount>
                   <PhysicalContent xsi:type="MyObjectBuilder_OxygenContainerObject">
                     <SubtypeName>OxygenBottle</SubtypeName>
-                    <GasLevel>0.5769211</GasLevel>
+                    <GasLevel>0.15473637</GasLevel>
                     <OxygenLevel>0</OxygenLevel>
                   </PhysicalContent>
                   <ItemId>6</ItemId>
@@ -242,125 +2100,533 @@
               <Size xsi:nil="true" />
               <InventoryFlags />
               <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
-            </Component>
-          </ComponentData>
-        </Components>
-      </ComponentContainer>
-      <CharacterModel>Default_Astronaut</CharacterModel>
-      <Inventory>
-        <CanPutItems>true</CanPutItems>
-        <Items>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
-              <SubtypeName>AngleGrinderItem</SubtypeName>
-            </PhysicalContent>
-            <ItemId>0</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
-              <SubtypeName>HandDrillItem</SubtypeName>
-              <GunEntity xsi:type="MyObjectBuilder_HandDrill">
-                <SubtypeName>HandDrill</SubtypeName>
-                <EntityId>89955202634312568</EntityId>
-                <PersistentFlags>None</PersistentFlags>
-              </GunEntity>
-            </PhysicalContent>
-            <ItemId>1</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
-              <SubtypeName>WelderItem</SubtypeName>
-            </PhysicalContent>
-            <ItemId>2</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_PhysicalGunObject">
-              <SubtypeName>AutomaticRifleItem</SubtypeName>
-              <GunEntity xsi:type="MyObjectBuilder_AutomaticRifle">
-                <SubtypeName>RifleGun</SubtypeName>
-                <EntityId>0</EntityId>
-                <PersistentFlags>None</PersistentFlags>
-              </GunEntity>
-            </PhysicalContent>
-            <ItemId>3</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>10</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
-              <SubtypeName>AutomaticRifleGun_Mag_20rd</SubtypeName>
-              <ProjectilesCount>0</ProjectilesCount>
-            </PhysicalContent>
-            <ItemId>4</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_GasContainerObject">
-              <SubtypeName>HydrogenBottle</SubtypeName>
-              <GasLevel>1</GasLevel>
-            </PhysicalContent>
-            <ItemId>5</ItemId>
-          </MyObjectBuilder_InventoryItem>
-          <MyObjectBuilder_InventoryItem>
-            <Amount>1</Amount>
-            <PhysicalContent xsi:type="MyObjectBuilder_OxygenContainerObject">
-              <SubtypeName>OxygenBottle</SubtypeName>
-              <GasLevel>0.5769211</GasLevel>
-              <OxygenLevel>0</OxygenLevel>
-            </PhysicalContent>
-            <ItemId>6</ItemId>
-          </MyObjectBuilder_InventoryItem>
-        </Items>
-        <nextItemId>7</nextItemId>
-        <Volume>0.4</Volume>
-        <Mass>9223372036854.775807</Mass>
-        <MaxItemCount>2147483647</MaxItemCount>
-        <Size xsi:nil="true" />
-        <InventoryFlags />
-        <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
-      </Inventory>
-      <Battery>
-        <CurrentCapacity>0</CurrentCapacity>
-        <RegenEffects />
-      </Battery>
-      <LightEnabled>true</LightEnabled>
-      <UsingLadder xsi:nil="true" />
-      <HeadAngle x="0" y="0" />
-      <LinearVelocity x="0" y="0" z="0" />
-      <AutoenableJetpackDelay>0</AutoenableJetpackDelay>
-      <JetpackEnabled>true</JetpackEnabled>
-      <ColorMaskHSV x="0.08611111" y="0.199999988" z="-0.27696225" />
-      <LootingCounter>0</LootingCounter>
-      <DisplayName>Catopia Rex</DisplayName>
-      <IsInFirstPersonView>true</IsInFirstPersonView>
-      <EnableBroadcasting>true</EnableBroadcasting>
-      <OxygenLevel>0.570341</OxygenLevel>
-      <EnvironmentOxygenLevel>0</EnvironmentOxygenLevel>
-      <StoredGases>
-        <StoredGas>
-          <Id Type="MyObjectBuilder_GasProperties" Subtype="Hydrogen" />
-          <FillLevel>0.914624</FillLevel>
-        </StoredGas>
-        <StoredGas>
-          <Id Type="MyObjectBuilder_GasProperties" Subtype="Oxygen" />
-          <FillLevel>0.570341</FillLevel>
-        </StoredGas>
-      </StoredGases>
-      <MovementState>Flying</MovementState>
-      <EnabledComponents>
-        <string>RagdollComponent</string>
-        <string>InventorySpawnComponent</string>
-      </EnabledComponents>
-      <NeedsOxygenFromSuit>false</NeedsOxygenFromSuit>
-      <OwningPlayerIdentityId>144115188075855895</OwningPlayerIdentityId>
-      <IsPersistenceCharacter>false</IsPersistenceCharacter>
-      <IsStartingCharacterForLobby>false</IsStartingCharacterForLobby>
-      <RelativeDampeningEntity>0</RelativeDampeningEntity>
-      <UsingLadderInfo xsi:nil="true" />
-      <EnableBroadcastingPlayerToggle>true</EnableBroadcastingPlayerToggle>
+            </Inventory>
+            <Battery>
+              <CurrentCapacity>9.004631E-06</CurrentCapacity>
+              <RegenEffects />
+            </Battery>
+            <LightEnabled>false</LightEnabled>
+            <UsingLadder xsi:nil="true" />
+            <HeadAngle x="0" y="0" />
+            <LinearVelocity x="0" y="0" z="0" />
+            <AutoenableJetpackDelay>-1</AutoenableJetpackDelay>
+            <JetpackEnabled>false</JetpackEnabled>
+            <ColorMaskHSV x="0.08611111" y="0.199999988" z="-0.27696225" />
+            <LootingCounter>0</LootingCounter>
+            <DisplayName>Catopia Rex</DisplayName>
+            <IsInFirstPersonView>true</IsInFirstPersonView>
+            <EnableBroadcasting>true</EnableBroadcasting>
+            <OxygenLevel>0.670081556</OxygenLevel>
+            <EnvironmentOxygenLevel>0</EnvironmentOxygenLevel>
+            <StoredGases>
+              <StoredGas>
+                <Id Type="MyObjectBuilder_GasProperties" Subtype="Hydrogen" />
+                <FillLevel>0.761933267</FillLevel>
+              </StoredGas>
+              <StoredGas>
+                <Id Type="MyObjectBuilder_GasProperties" Subtype="Oxygen" />
+                <FillLevel>0.670081556</FillLevel>
+              </StoredGas>
+            </StoredGases>
+            <MovementState>Sitting</MovementState>
+            <EnabledComponents>
+              <string>RagdollComponent</string>
+              <string>InventorySpawnComponent</string>
+            </EnabledComponents>
+            <NeedsOxygenFromSuit>false</NeedsOxygenFromSuit>
+            <OwningPlayerIdentityId>144115188075855895</OwningPlayerIdentityId>
+            <IsPersistenceCharacter>false</IsPersistenceCharacter>
+            <IsStartingCharacterForLobby>false</IsStartingCharacterForLobby>
+            <RelativeDampeningEntity>0</RelativeDampeningEntity>
+            <UsingLadderInfo xsi:nil="true" />
+            <EnableBroadcastingPlayerToggle>true</EnableBroadcastingPlayerToggle>
+          </Pilot>
+          <PilotRelativeWorld>
+            <Position x="1.5218352079391479" y="0.061640646308660507" z="-4.1782221794128418" />
+            <Forward x="-0.271984279" y="-0.499094635" z="0.822756946" />
+            <Up x="-0.301904947" y="0.8560778" z="0.419504762" />
+            <Orientation>
+              <X>-0.115068063</X>
+              <Y>0.947701335</Y>
+              <Z>0.242323011</Z>
+              <W>0.172919229</W>
+            </Orientation>
+          </PilotRelativeWorld>
+          <PilotGunDefinition xsi:nil="true" />
+          <IsInFirstPersonView>true</IsInFirstPersonView>
+          <OxygenLevel>0</OxygenLevel>
+          <PilotJetpackEnabled>false</PilotJetpackEnabled>
+          <TargetData>
+            <TargetId>0</TargetId>
+            <IsTargetLocked>false</IsTargetLocked>
+            <LockingProgress>0</LockingProgress>
+          </TargetData>
+          <SitAnimation>763441</SitAnimation>
+          <SteamId>76561197989888517</SteamId>
+          <SerialId>0</SerialId>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+          <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
+          <EntityId>119354302205005406</EntityId>
+          <Name>119354302205005406</Name>
+          <Min x="-1" y="2" z="0" />
+          <BlockOrientation Forward="Left" Up="Up" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+          <CurrentStoredPower>0.895611048</CurrentStoredPower>
+          <ProducerEnabled>true</ProducerEnabled>
+          <MaxStoredPower>0</MaxStoredPower>
+          <SemiautoEnabled>false</SemiautoEnabled>
+          <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
+          <ChargeMode>0</ChargeMode>
+        </MyObjectBuilder_CubeBlock>
+      </CubeBlocks>
+      <IsStatic>true</IsStatic>
+      <DisplayName>Moon block 1</DisplayName>
+      <DestructibleBlocks>true</DestructibleBlocks>
+      <IsRespawnGrid>false</IsRespawnGrid>
+      <LocalCoordSys>2</LocalCoordSys>
+      <TargetingTargets />
+      <NPCGridClaimElapsed xsi:nil="true" />
+    </MyObjectBuilder_EntityBase>
+    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
+      <SubtypeName />
+      <EntityId>134308348473294513</EntityId>
+      <PersistentFlags>CastShadows InScene</PersistentFlags>
+      <Name>134308348473294513</Name>
+      <PositionAndOrientation>
+        <Position x="10756.586230646826" y="11083.471900673583" z="10983.910332526852" />
+        <Forward x="0.7759913" y="-0.17565164" z="-0.605792" />
+        <Up x="-0.5792761" y="-0.5784645" z="-0.5742978" />
+        <Orientation>
+          <X>-0.425182223</X>
+          <Y>-0.1277657</Y>
+          <Z>0.7800335</Z>
+          <W>0.440957665</W>
+        </Orientation>
+      </PositionAndOrientation>
+      <LocalPositionAndOrientation xsi:nil="true" />
+      <GridSizeEnum>Small</GridSizeEnum>
+      <CubeBlocks>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LandingGear">
+          <SubtypeName>SmallBlockLandingGear</SubtypeName>
+          <EntityId>134308348473294514</EntityId>
+          <Name>134308348473294514</Name>
+          <Min x="0" y="0" z="-1" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <Enabled>true</Enabled>
+          <IsLocked>true</IsLocked>
+          <BrakeForce>-INF</BrakeForce>
+          <AutoLock>true</AutoLock>
+          <FirstLockAttempt>false</FirstLockAttempt>
+          <LockSound>ArcShipLandGearOn</LockSound>
+          <UnlockSound>ArcShipLandGearOff</UnlockSound>
+          <FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+          <AttachedEntityId>73675067303155917</AttachedEntityId>
+          <MasterToSlave>
+            <OrientationOffset>
+              <X>0.008258248</X>
+              <Y>0.9998904</Y>
+              <Z>0.008245691</Z>
+              <W>-0.009110325</W>
+            </OrientationOffset>
+            <PositionOffset>
+              <X>0.00164968451</X>
+              <Y>3.98135829</Y>
+              <Z>-0.365010619</Z>
+            </PositionOffset>
+            <OrientationAsVector>
+              <X>0.008258248</X>
+              <Y>0.9998904</Y>
+              <Z>0.008245691</Z>
+              <W>-0.009110325</W>
+            </OrientationAsVector>
+          </MasterToSlave>
+          <GearPivotPosition>
+            <X>0.00181320589</X>
+            <Y>-0.273519963</Y>
+            <Z>0.02395982</Z>
+          </GearPivotPosition>
+          <OtherPivot>
+            <Position>
+              <X>-0.004439487</X>
+              <Y>3.708817</Y>
+              <Z>-0.393993556</Z>
+            </Position>
+            <Orientation>
+              <PackedValue>11577101222301147194</PackedValue>
+            </Orientation>
+            <Matrix>
+              <M11>-1.000136</M11>
+              <M12>0.01635975</M12>
+              <M13>0.01835516</M13>
+              <M14>0</M14>
+              <M21>0.01666027</M21>
+              <M22>0.999727666</M22>
+              <M23>0.0163443536</M23>
+              <M24>0</M24>
+              <M31>-0.01808283</M31>
+              <M32>0.0166451484</M32>
+              <M33>-1.00013626</M33>
+              <M34>0</M34>
+              <M41>-0.004439487</M41>
+              <M42>3.708817</M42>
+              <M43>-0.393993556</M43>
+              <M44>1</M44>
+              <Up>
+                <X>0.01666027</X>
+                <Y>0.999727666</Y>
+                <Z>0.0163443536</Z>
+              </Up>
+              <Down>
+                <X>-0.01666027</X>
+                <Y>-0.999727666</Y>
+                <Z>-0.0163443536</Z>
+              </Down>
+              <Right>
+                <X>-1.000136</X>
+                <Y>0.01635975</Y>
+                <Z>0.01835516</Z>
+              </Right>
+              <Left>
+                <X>1.000136</X>
+                <Y>-0.01635975</Y>
+                <Z>-0.01835516</Z>
+              </Left>
+              <Forward>
+                <X>0.01808283</X>
+                <Y>-0.0166451484</Y>
+                <Z>1.00013626</Z>
+              </Forward>
+              <Backward>
+                <X>-0.01808283</X>
+                <Y>0.0166451484</Y>
+                <Z>-1.00013626</Z>
+              </Backward>
+              <Translation>
+                <X>-0.004439487</X>
+                <Y>3.708817</Y>
+                <Z>-0.393993556</Z>
+              </Translation>
+            </Matrix>
+          </OtherPivot>
+          <LockMode>Locked</LockMode>
+          <IsParkingEnabled>false</IsParkingEnabled>
+        </MyObjectBuilder_CubeBlock>
+        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Cockpit">
+          <SubtypeName>SmallBlockCockpit</SubtypeName>
+          <EntityId>102989507401457751</EntityId>
+          <Name>102989507401457751</Name>
+          <Min x="-1" y="2" z="-1" />
+          <ColorMaskHSV x="0" y="-0.8" z="0" />
+          <Owner>144115188075855895</Owner>
+          <BuiltBy>144115188075855895</BuiltBy>
+          <ShareMode>Faction</ShareMode>
+          <ComponentContainer>
+            <Components>
+              <ComponentData>
+                <TypeId>MyInventoryBase</TypeId>
+                <Component xsi:type="MyObjectBuilder_Inventory">
+                  <CanPutItems>true</CanPutItems>
+                  <Items />
+                  <nextItemId>0</nextItemId>
+                  <Volume>1</Volume>
+                  <Mass>9223372036854.775807</Mass>
+                  <MaxItemCount>2147483647</MaxItemCount>
+                  <Size xsi:nil="true" />
+                  <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                  <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                </Component>
+              </ComponentData>
+              <ComponentData>
+                <TypeId>MyMultiTextPanelComponent</TypeId>
+                <Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+                  <TextPanelsContents>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_ArtificialHorizon</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_EnergyHydrogen</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <ContentType>SCRIPT</ContentType>
+                      <SelectedScript>TSS_Gravity</SelectedScript>
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                    <MySerializedTextPanelData>
+                      <ChangeInterval>0</ChangeInterval>
+                      <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                      <FontSize>1</FontSize>
+                      <ShowText>NONE</ShowText>
+                      <FontColor>
+                        <PackedValue>4294967295</PackedValue>
+                        <X>255</X>
+                        <Y>255</Y>
+                        <Z>255</Z>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </FontColor>
+                      <BackgroundColor>
+                        <PackedValue>4278190080</PackedValue>
+                        <X>0</X>
+                        <Y>0</Y>
+                        <Z>0</Z>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>255</A>
+                      </BackgroundColor>
+                      <CurrentShownTexture>0</CurrentShownTexture>
+                      <SelectedScript />
+                      <TextPadding>2</TextPadding>
+                      <ScriptBackgroundColor>
+                        <PackedValue>4288108544</PackedValue>
+                        <X>0</X>
+                        <Y>88</Y>
+                        <Z>151</Z>
+                        <R>0</R>
+                        <G>88</G>
+                        <B>151</B>
+                        <A>255</A>
+                      </ScriptBackgroundColor>
+                      <ScriptForegroundColor>
+                        <PackedValue>4294962611</PackedValue>
+                        <X>179</X>
+                        <Y>237</Y>
+                        <Z>255</Z>
+                        <R>179</R>
+                        <G>237</G>
+                        <B>255</B>
+                        <A>255</A>
+                      </ScriptForegroundColor>
+                      <Sprites>
+                        <Length>0</Length>
+                      </Sprites>
+                    </MySerializedTextPanelData>
+                  </TextPanelsContents>
+                </Component>
+              </ComponentData>
+            </Components>
+          </ComponentContainer>
+          <CustomName>Landed Cockpit</CustomName>
+          <ShowOnHUD>false</ShowOnHUD>
+          <ShowInTerminal>true</ShowInTerminal>
+          <ShowInToolbarConfig>true</ShowInToolbarConfig>
+          <ShowInInventory>true</ShowInInventory>
+          <NumberInGrid>1</NumberInGrid>
+          <UseSingleWeaponMode>false</UseSingleWeaponMode>
+          <Toolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </Toolbar>
+          <SelectedGunId xsi:nil="true" />
+          <BuildToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </BuildToolbar>
+          <OnLockedToolbar>
+            <ToolbarType>Character</ToolbarType>
+            <SelectedSlot xsi:nil="true" />
+            <Slots />
+            <SlotsGamepad />
+          </OnLockedToolbar>
+          <PilotRelativeWorld>
+            <Position x="3.6174106597900391" y="-0.567513108253479" z="1.5196824073791504" />
+            <Forward x="-0.884984136" y="-0.3089398" z="-0.3483665" />
+            <Up x="-0.25684765" y="0.947954834" z="-0.188177958" />
+            <Orientation>
+              <X>-0.151698753</X>
+              <Y>0.5502765</Y>
+              <Z>0.0548641756</Z>
+              <W>0.8192516</W>
+            </Orientation>
+          </PilotRelativeWorld>
+          <PilotGunDefinition xsi:nil="true" />
+          <IsInFirstPersonView>true</IsInFirstPersonView>
+          <OxygenLevel>0</OxygenLevel>
+          <PilotJetpackEnabled xsi:nil="true" />
+          <TargetData>
+            <TargetId>0</TargetId>
+            <IsTargetLocked>false</IsTargetLocked>
+            <LockingProgress>0</LockingProgress>
+          </TargetData>
+          <SitAnimation>566435</SitAnimation>
+        </MyObjectBuilder_CubeBlock>
+      </CubeBlocks>
+      <DisplayName>Landed Ship</DisplayName>
+      <DestructibleBlocks>true</DestructibleBlocks>
+      <IsRespawnGrid>false</IsRespawnGrid>
+      <LocalCoordSys>0</LocalCoordSys>
+      <TargetingTargets />
+      <NPCGridClaimElapsed xsi:nil="true" />
     </MyObjectBuilder_EntityBase>
     <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_Planet">
       <SubtypeName />
@@ -453,55 +2719,6 @@
       <SpherizeWithDistance>true</SpherizeWithDistance>
       <PlanetGenerator>Moon</PlanetGenerator>
       <Seed>12345</Seed>
-    </MyObjectBuilder_EntityBase>
-    <MyObjectBuilder_EntityBase xsi:type="MyObjectBuilder_CubeGrid">
-      <SubtypeName />
-      <EntityId>75314226221180470</EntityId>
-      <PersistentFlags>CastShadows InScene</PersistentFlags>
-      <Name>75314226221180470</Name>
-      <PositionAndOrientation>
-        <Position x="-58630.699584527916" y="-76674.122979841923" z="-102960.81884241293" />
-        <Forward x="-0.253791869" y="0.809211" z="-0.529874742" />
-        <Up x="0.7617399" y="-0.170397237" z="-0.6250737" />
-        <Orientation>
-          <X>-0.105376519</X>
-          <Y>-0.473242432</Y>
-          <Z>0.7576902</Z>
-          <W>-0.436855733</W>
-        </Orientation>
-      </PositionAndOrientation>
-      <LocalPositionAndOrientation xsi:nil="true" />
-      <GridSizeEnum>Large</GridSizeEnum>
-      <CubeBlocks>
-        <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
-          <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
-          <EntityId>75314226221180471</EntityId>
-          <Name>75314226221180471</Name>
-          <ColorMaskHSV x="0" y="-0.8" z="0" />
-          <Owner>144115188075855895</Owner>
-          <BuiltBy>144115188075855895</BuiltBy>
-          <ShowOnHUD>false</ShowOnHUD>
-          <ShowInTerminal>true</ShowInTerminal>
-          <ShowInToolbarConfig>true</ShowInToolbarConfig>
-          <ShowInInventory>true</ShowInInventory>
-          <NumberInGrid>1</NumberInGrid>
-          <Enabled>true</Enabled>
-          <CurrentStoredPower>0.900000036</CurrentStoredPower>
-          <ProducerEnabled>true</ProducerEnabled>
-          <MaxStoredPower>0</MaxStoredPower>
-          <SemiautoEnabled>false</SemiautoEnabled>
-          <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
-          <ChargeMode>0</ChargeMode>
-        </MyObjectBuilder_CubeBlock>
-      </CubeBlocks>
-      <IsStatic>true</IsStatic>
-      <IsUnsupportedStation>true</IsUnsupportedStation>
-      <DisplayName>Space</DisplayName>
-      <DestructibleBlocks>true</DestructibleBlocks>
-      <IsRespawnGrid>false</IsRespawnGrid>
-      <LocalCoordSys>0</LocalCoordSys>
-      <TargetingTargets />
-      <NPCGridClaimElapsed xsi:nil="true" />
     </MyObjectBuilder_EntityBase>
   </SectorObjects>
 </MyObjectBuilder_Sector>

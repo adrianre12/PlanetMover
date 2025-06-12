@@ -289,14 +289,14 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when line.Contains("<LocalPositionAndOrientation>"): // work arround for characters possibly grids
+                    case bool b when line.Contains("<LocalPositionAndOrientation>") || line.Contains("<MasterToSlaveTransform>"): // work arround for characters possibly grids
                         {
                             //Console.WriteLine("Start PilotRelativeWorld");
                             disablePosition = true;
                             break;
                         }
 
-                    case bool b when line.Contains("</LocalPositionAndOrientation>"):
+                    case bool b when line.Contains("</LocalPositionAndOrientation>") || line.Contains("</MasterToSlaveTransform>"):
                         {
                             //Console.WriteLine("End PilotRelativeWorld");
                             disablePosition = false;

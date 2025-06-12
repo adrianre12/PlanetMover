@@ -84,6 +84,8 @@ namespace WorldMover
             bool isThePlanet = false;
             bool inChildren = false;
             bool disablePosition = false;
+            int inProjectedGrids = 0;
+            int entityLineCounter = 0;
             var lineBuffer = new StringBuilder();
 
             switch (mode)
@@ -126,8 +128,28 @@ namespace WorldMover
                     case bool b when !inChildren && line.Contains("</MyObjectBuilder_EntityBase>"):
                         {
                             Console.WriteLine($"{indent}Selected: {outputSectorObject}");
-                            Console.WriteLine("EntityBase End:\n");
+                            Console.WriteLine($"EntityBase End: Lines={entityLineCounter + 1}\n");
                             flush = true;
+                            break;
+                        }
+
+                    case bool b when line.Contains("<ProjectedGrids>"):
+                        {
+                            inProjectedGrids++;
+                            Console.WriteLine($"*{indent}ProjectedGrids start: depth={inProjectedGrids}");
+
+                            disablePosition = true;
+                            break;
+                        }
+
+                    case bool b when line.Contains("</ProjectedGrids>"):
+                        {
+                            if (inProjectedGrids > 0)
+                                inProjectedGrids--;
+                            else
+                                disablePosition = false;
+
+                            Console.WriteLine($"*{indent}ProjectedGrids end: depth={inProjectedGrids}");
                             break;
                         }
 
@@ -227,7 +249,7 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when line.Contains("<DisplayName>"):
+                    case bool b when inProjectedGrids == 0 && line.Contains("<DisplayName>"):
                         {
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
@@ -236,7 +258,7 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when line.Contains("<StorageName>"):
+                    case bool b when inProjectedGrids == 0 && line.Contains("<StorageName>"):
                         {
                             var start = line.IndexOf(">") + 1;
                             var end = line.IndexOf("<", start);
@@ -261,49 +283,53 @@ namespace WorldMover
                             break;
                         }
 
-                    case bool b when line.Contains("<Pilot>"): // work arround for characters possibly grids
+                    case bool b when inProjectedGrids == 0 && line.Contains("<Pilot>"): // work arround for characters possibly grids
                         {
                             Console.WriteLine($"{indent}Start Pilot");
                             indent = "\t\t";
                             break;
                         }
 
-                    case bool b when line.Contains("</Pilot>"):
+                    case bool b when inProjectedGrids == 0 && line.Contains("</Pilot>"):
                         {
                             indent = "\t";
                             Console.WriteLine($"{indent}End Pilot");
                             break;
                         }
 
-                    case bool b when line.Contains("<PilotRelativeWorld>"): // work arround for characters possibly grids
+                    case bool b when inProjectedGrids == 0 && line.Contains("<PilotRelativeWorld>"):
                         {
-                            //Console.WriteLine("Start PilotRelativeWorld");
+                            //Console.WriteLine("disablePosition=false 0");
                             disablePosition = true;
                             break;
                         }
 
-                    case bool b when line.Contains("</PilotRelativeWorld>"):
+                    case bool b when inProjectedGrids == 0 && line.Contains("</PilotRelativeWorld>"):
                         {
-                            //Console.WriteLine("End PilotRelativeWorld");
+                            //Console.WriteLine("disablePosition=false 1");
                             disablePosition = false;
                             break;
                         }
 
-                    case bool b when line.Contains("<LocalPositionAndOrientation>") || line.Contains("<MasterToSlaveTransform>"): // work arround for characters possibly grids
+                    case bool b when inProjectedGrids == 0 && (line.Contains("<LocalPositionAndOrientation>") || line.Contains("<MasterToSlaveTransform>")):
                         {
-                            //Console.WriteLine("Start PilotRelativeWorld");
                             disablePosition = true;
                             break;
                         }
 
-                    case bool b when line.Contains("</LocalPositionAndOrientation>") || line.Contains("</MasterToSlaveTransform>"):
+                    case bool b when inProjectedGrids == 0 && (line.Contains("</LocalPositionAndOrientation>") || line.Contains("</MasterToSlaveTransform>")):
                         {
-                            //Console.WriteLine("End PilotRelativeWorld");
+                            //Console.WriteLine("disablePosition=false 2");
                             disablePosition = false;
                             break;
                         }
 
                 } // end of switch
+
+                if (isEntityBase)
+                {
+                    entityLineCounter++;
+                }
 
                 //decide flush or discard
 
@@ -323,6 +349,8 @@ namespace WorldMover
                     outputSectorObject = false;
                     inChildren = false;
                     disablePosition = false;
+                    inProjectedGrids = 0;
+                    entityLineCounter = 0;
                     continue;
                 }
                 if (isEntityBase)

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetMoverTools", "PlanetMoverTools.csproj", "{E0E6F5FB-C413-4262-B4C0-C325D70496D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0E6F5FB-C413-4262-B4C0-C325D70496D0}.Debug|x64.ActiveCfg = Debug|x64
+		{E0E6F5FB-C413-4262-B4C0-C325D70496D0}.Debug|x64.Build.0 = Debug|x64
+		{E0E6F5FB-C413-4262-B4C0-C325D70496D0}.Release|x64.ActiveCfg = Release|x64
+		{E0E6F5FB-C413-4262-B4C0-C325D70496D0}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB42F54F-EFC8-4D81-9EFD-A553BCCEA1B1}
+	EndGlobalSection
+EndGlobal

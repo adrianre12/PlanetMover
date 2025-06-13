@@ -10,7 +10,6 @@
         Remove,
         Extract,
         Config,
-        Temp,
     }
     class Program
     {
@@ -44,13 +43,6 @@
                     break;
                 case Mode.Extract:
                     break;
-                case Mode.Temp:
-                    {
-                        Temp temp = new Temp();
-                        temp.One();
-                        System.Environment.Exit(0);
-                        break;
-                    }
                 default:
                     {
                         Console.WriteLine("Unimplemented Mode:");

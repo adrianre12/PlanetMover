@@ -22,6 +22,8 @@ The To position by default is set to the planet centre, thus if this were used, 
 
 The To position can then be updated with the X, Y and Z positions from the target position GPS.
 
+The mod is [PlanetMover Tools](https://steamcommunity.com/sharedfiles/filedetails/?id=3497612369)
+
 ## Notes
 
 It is recommended that the SANDBOX_0_0_0_.sbs be copied to a directory outside of the world save as the directory is wiped with each game save.

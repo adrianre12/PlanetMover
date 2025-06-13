@@ -1,3 +1,5 @@
+# This is a crude rats nest of code, but it works and moved a planet on our server. 
+
 # PlanetMover
 
 PlanetMover is a tool for moving planets and associated grids in Space Engineers. The command is run when the game is <ins>not</ins> running and it parses the SANDBOX_0_0_0_.sbs to perform several actions;
@@ -5,10 +7,12 @@ PlanetMover is a tool for moving planets and associated grids in Space Engineers
 - Move: Move the planet and grids within a configured radius to the GPS position.
 - Filter: Copies all entities except those outside the configured radius. No move is made.
 - Remove: Copies all entities except those inside the configured radius. No move is made.
-- Extract: Output the Entities inside the configured radius; this does not create a valid SBS. 
+- Extract: Output the Entities inside the configured radius; this does not create a valid SBS. In theory, this could be pasted into another SBS, but there may be EntityId collisions.
 - Config: Create a new default config file.
 
 PlanetMover calculates the transformation from the planet's centre to the GPS point, which is then applied to each entity.
+
+It is a state machine checking each line of the SBS, much easier than battling with the C# XML library.
 
 ## Config creation
 

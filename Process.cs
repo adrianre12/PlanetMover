@@ -95,14 +95,19 @@ namespace WorldMover
                         nonSectorObjects = true;
                         break;
                     }
-                case Mode.Extract:
+                case Mode.Filter:
                     {
-                        nonSectorObjects = false;
+                        nonSectorObjects = true;
                         break;
                     }
                 case Mode.Remove:
                     {
                         nonSectorObjects = true;
+                        break;
+                    }
+                case Mode.Extract:
+                    {
+                        nonSectorObjects = false;
                         break;
                     }
             }
@@ -217,14 +222,15 @@ namespace WorldMover
 
                                         break;
                                     }
-                                case Mode.Extract:
+                                case Mode.Filter:
                                     {
                                         Console.WriteLine($"{indent}Position: X={position.X} Y={position.Y} Z={position.Z}");
 
-                                        // is planet or grid in distance then
-                                        if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
-                                            break;
+                                        //is planet or grid in distance then 
                                         outputSectorObject = true;
+                                        if (isThePlanet || distance < Config.From.IncludeEntitiesRadius) // planets dont use the center.position
+                                            break;
+                                        outputSectorObject = false;
                                         break;
                                     }
                                 case Mode.Remove:
@@ -236,7 +242,17 @@ namespace WorldMover
                                         if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
                                             break;
                                         outputSectorObject = false;
-                                        //else true;
+
+                                        break;
+                                    }
+                                case Mode.Extract:
+                                    {
+                                        Console.WriteLine($"{indent}Position: X={position.X} Y={position.Y} Z={position.Z}");
+
+                                        // is planet or grid in distance then
+                                        if (!isThePlanet && distance > Config.From.IncludeEntitiesRadius) // planets dont use the center.position
+                                            break;
+                                        outputSectorObject = true;
                                         break;
                                     }
                                 default:

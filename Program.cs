@@ -6,8 +6,9 @@
     {
         None,
         Move,
-        Extract,
+        Filter,
         Remove,
+        Extract,
         Config,
         Temp,
     }
@@ -37,9 +38,11 @@
                     }
                 case Mode.Move:
                     break;
-                case Mode.Extract:
+                case Mode.Filter:
                     break;
                 case Mode.Remove:
+                    break;
+                case Mode.Extract:
                     break;
                 case Mode.Temp:
                     {
@@ -89,10 +92,12 @@
             Console.WriteLine("\nUsage:");
             Console.WriteLine("Mode: Move - Change planet and grids position");
             Console.WriteLine("      WorldMover.exe Move ConfigFileName InputFileName OutputFileName\n");
-            Console.WriteLine("Mode: Extract - Copy only planet and grids to output file");
+            Console.WriteLine("Mode: Filter - Output only planet and grids and output to a valid SBS file. Does not Move.");
             Console.WriteLine("      WorldMover.exe Extract ConfigFileName InputFileName OutputFileName\n");
-            Console.WriteLine("Mode: Remove - Delete planet and grids");
+            Console.WriteLine("Mode: Remove - Delete planet and grids and output to a valid SBS file. Does not Move.");
             Console.WriteLine("      WorldMover.exe Remove ConfigFileName InputFileName OutputFileName\n");
+            Console.WriteLine("Mode: Extract - Copy only planet and grids to output file, this is not a valid SBS. Does not Move.");
+            Console.WriteLine("      WorldMover.exe Extract ConfigFileName InputFileName OutputFileName\n");
             Console.WriteLine("Mode: Config - Create a new default config file");
             Console.WriteLine("      WorldMover.exe Config ConfigFileName");
             System.Environment.Exit(1);

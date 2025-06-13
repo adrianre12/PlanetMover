@@ -2,7 +2,7 @@
   "profiles": {
     "WorldMover": {
       "commandName": "Project",
-      "commandLineArgs": "Remove TestConfig1.xml  ES_SANDBOX_0_0_0_.sbs Output.tmp",
+      "commandLineArgs": "Filter TestConfig1.xml  SANDBOX_0_0_0_.sbs Output.tmp",
       "workingDirectory": "C:\\Users\\Adrian\\source\\repos\\WorldMover\\Example"
     }
   }
